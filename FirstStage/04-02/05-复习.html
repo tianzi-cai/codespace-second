@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="javascript:void(0);">这是一个链接</a>
+    <div id="clock"></div>
+
+    <script>
+        // function JsClock(){
+        // let today=new Date();
+        // let hour=today.getHours();
+        // let min=today.getMinutes();
+        // let sec3=today.getSeconds();
+        // let text=hour+":"+min+":"+sec3;
+
+        // document.getElementById("clock").innerText=text;
+        // setInterval(JsClock,1000);
+        // }
+        // JsClock();
+
+
+
+        // console.log(num);
+        // let num=8;
+
+        // fun1();
+        // function fun1(){
+        //     console.log("hello");
+        // }
+
+        
+//         const PI=3.14;
+//         const ROLE="admin";
+//         let b="xyz";
+
+//         let a=`first line,
+// se line,${b}
+// third line`;
+//         console.log(a);
+
+    // let arr1=[1,2.3];
+    // let arr2=[1,2.3];
+    // console.log(arr1==arr2);
+    // console.log(arr1===arr2);
+    // console.log(arr1[1]===arr2[1]);
+
+    // console.log(false&&true);
+    // console.log("0"&&1);
+    // console.log("0"||1);
+    // console.log(true||"dog");
+    // console.log("cat"||false);
+    // console.log(false||true);
+    // console.log(2&&"2");
+    // console.log(4>3);
+
+    // console.log("2");
+    // console.log(2);
+
+    // let a=2;
+    // let b=5;
+    // console.log(a+""+b);
+
+    // let arr1=[1,2,3];
+    // delete arr1;
+    // console.log(arr1);
+
+    // let obj={
+    //     user:"cai tianzi",
+    //     age:18,
+    //     city:"suzhou"
+    // };
+    // delete obj.age;
+    // console.log(obj);
+    // console.log(obj.user);
+    
+    // let arr3=["a","b","c",3];
+    // let n="com";    
+    // let obj={
+    //     user:"cai tianzi",
+    //     age:18,
+    //     city:"suzhou"
+    // };
+    
+    // console.log('city' in obj);
+    // console.log(arr3.indexOf("b"));
+    // console.log(obj instanceof Object);
+
+    // function UserError(msg){
+    //     this.message = msg||'默认信息';
+    //     this.name="名字";
+    // }
+    // // UserError.prototype=new Error();
+    // // UserError.prototype.constructor=UserError;
+
+    // // let newError=new UserError();
+    // // console.error(newError);
+
+    // let x=-2;
+    // try{
+    //     if(x<0){
+    //         throw new Error("值小于0");
+    //     }
+    // }catch(e){
+    //     console.error("此值小于0");
+    // }finally{
+    //     console.log("x="+x);
+    // }
+
+
+    // if(x<0){
+    //     throw new Error("值小于0");
+    // }else{
+    //     console.log("x="+x);
+    // }
+
+    // let arr4=["a","b",1,2,3];
+    // for(let x in arr4){
+    //     console.log(arr4[x]);
+    // }
+
+    // let obj={
+    //     user:"cai tianzi",
+    //     age:18,
+    //     city:"suzhou"
+    // };
+
+    // obj.foo = "hello";
+    // arr4.push("world");
+    // arr4.push(4,"5");
+    // console.log(obj);
+
+    // for(let x of arr4){
+    //     console.log(x);
+    // }
+
+    // function fun1(a){
+    //     for(let i=0;i<=arguments.length;i++){
+    //         console.log(arguments[i]);
+    //     }
+    // }
+    // fun1(1,2,3,4);
+    // let date=new Date();
+    // console.log(date);
+
+    // let date1=new Date("2019-10-12 12:38:12");
+    // console.log(date1);
+
+    // let today=new Date();
+    // console.log(today);
+
+    // let year=today.getFullYear();
+    // console.log(year);
+
+    // let month=today.getMonth();
+    // console.log(month+1);
+
+    // let date3=today.getDate();
+    // console.log(date3);
+
+    // let day=today.getDay();
+    // console.log(day);
+
+    // let hour=today.getHours();
+    // console.log(hour);
+
+    // let min=today.getMinutes();
+    // console.log(min);
+     
+    // let sec=today.getSeconds();
+    // console.log(sec);
+
+
+
+
+
+
+
+    let today=new Date();
+    let date4=new Date("2020-5-1 00:00:00");
+
+    let time=today.getTime();
+    console.log(time);
+
+    time2=date4.getTime();
+    console.log(time2);
+
+    let d=Date.parse("2020-5-1 00:00:00");
+    console.log(d);
+
+    let sec1=time2-time;
+    console.log(sec1);
+    day1=sec1/60/60/1000/24;
+    day2=parseInt(day1);
+    day3=(day1-day2)*24; 
+    console.log(day1);
+    console.log(day3);
+    
+
+
+
+
+
+        
+        
+    </script>
+</body>
+</html>

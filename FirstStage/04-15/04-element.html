@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" class="p1 p2" data-name="cai" data-title-tag="标题" data-id="iddiv1">这是一个段落</div>
+    <script>
+        let p1 =document.querySelector('.p1');
+        let arrs =p1.attributes;
+        console.log(arrs[1]);
+        let arrs_1 =p1.dataset;
+        console.log(arrs_1.titleTag);
+
+        
+        p1.classList.add('p3');
+        // p1.classList.remove('p2');
+        let x = p1.classList.contains('p4');
+        console.log(x);
+        p1.classList.toggle('p2',true);
+        console.log(p1.classList);
+        
+
+
+    </script>
+</body>
+</html>

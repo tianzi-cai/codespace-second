@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3];
+        console.log(...arr);
+
+
+        // let x;
+        // let newarr = [...(x>0?[1]:[2]),2];
+        // console.log(newarr);
+
+
+        let a1 = [1,2,3];
+        let a2 =[3,4,5];
+        // let a3 =a1.concat(a2);
+        let a3 =[...a1,...a2];
+        console.log(a3);
+
+
+        let str = 'hello';
+        let a8 = [...str];
+        console.log(a8); 
+
+
+        function fun(arr1){
+            let arr2 =Array.from(arguments);
+            console.log(arr2);
+        }
+        let arr1 = [1,2,3,4];
+        fun(arr1);
+
+
+
+
+    </script>
+</body>
+</html>

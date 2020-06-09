@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .users{
+            margin-top: 50px;
+            /* 表格的边框 */
+            border: 1px solid red;
+            /* 合并边框 
+            seperate: 双边框
+            collapse：合并边框
+            */
+            border-collapse: collapse;
+        }
+        .users td, .users th{
+            /*单元格的表框 */
+            border: 1px solid red;
+        }
+        /* 表格的尺寸属性 */
+        .users2{
+            margin-top: 50px;
+            /* 表格的边框 */
+            border: 1px solid red;
+            /* 合并边框 
+            seperate: 双边框
+            collapse：合并边框
+            */
+            border-collapse: collapse;
+            /* 设置宽度 */
+            width: 500px;
+        }
+        .users2 td, .users2 th{
+            /*单元格的表框 */
+            border: 1px solid red;
+        }
+
+        .users2 th{
+            height: 50px;
+            background-color: royalblue;
+        }
+        /* 设置行的背景颜色 */
+        .users2 .odd{
+            background-color: skyblue;
+        }
+        /* 设置列的宽度 */
+        .users2 .name{
+            width: 100px;
+        }
+        /* 设置单元格的padding */
+        .users2 .name-padding{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSStable</h2>
+    <!-- 表格淘汰的设置方式 -->
+    <table border="2">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>18</td>
+        </tr>
+    </table>
+    <!-- 表格边框 -->
+    <table class="users">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>18</td>
+        </tr>
+    </table>
+    <!--  -->
+    <table class="users2">
+        <tr>
+            <th class="name">姓名</th>
+            <th>年龄</th>
+        </tr>
+        <tr class="odd">
+            <td>张三</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td class="name-padding">张三</td>
+            <td>18</td>
+        </tr>
+        <tr class="odd">
+            <td>张三</td>
+            <td>18</td>
+        </tr>
+    </table>
+</body>
+</html>

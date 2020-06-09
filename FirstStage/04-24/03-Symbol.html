@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sym2 = Symbol('a');
+        let sym3 = Symbol('a');
+        console.log(sym2==sym3);
+        // console.log(sym3);
+        console.log(Symbol.length);
+        // console.log(sym3.length);
+        let localsym1 = Symbol.for('foo');
+        console.log(localsym1);
+        let localsym = Symbol.keyFor(sym2);
+        console.log(localsym);
+
+        console.log(Object(1)==1);
+
+        let obj ={};
+        obj.a =1;
+        obj[Symbol('abc')]='hello';
+        obj[Symbol('abc1')]='hello1';
+        obj[Symbol('abc2')]='hello2';
+        obj[Symbol('abc3')]='hello3';
+        console.log(obj);
+
+        for(let x in obj){
+            console.log(obj[x]);
+        }
+
+        let jsonobj =JSON.stringify(obj);
+        console.log(jsonobj);
+
+        console.log(Object.getOwnPropertySymbols(obj));
+
+
+    </script>
+</body>
+</html>

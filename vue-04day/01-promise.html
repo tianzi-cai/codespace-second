@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let promise = new Promise(function(resolve,reject){
+
+            let xhr = new XMLHttpRequest();
+            let url ="https://api.apiopen.top/getJoke?page=1&count=10&type=image";
+            xhr.open("get",url);
+            xhr.send();
+
+            xhr.onload =function(){
+                resolve(xhr.response);
+            }
+
+            xhr.onerror = function(){
+                reject();
+            }
+
+        });
+
+        promise.then(function(result){
+            console.log("请求成功");
+            console.log(result)
+
+        });
+
+        promise.catch(function(result){
+            console.log("请求失败");
+            console.log(result);
+
+
+        });
+
+ 
+
+
+
+    </script>
+</body>
+</html>

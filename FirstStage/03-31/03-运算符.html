@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.baidu.com">这是一个a链接</a>
+    <a href="javascript:void(0);">这是一个阻止a链接</a>
+
+    <script>
+        let age=14;
+        let str=(age>=18)?"成年人":"未成年人"
+        console.log(str);
+
+        let arr2 = [2,3,4,5];
+        delete arr2;
+        console.log(arr2);
+
+        let arr=[1,2,3,4,5];
+        console.log(5 in arr);//下标是否在此数组中存在
+        console.log(arr.indexOf(3));//数在数组中是否存在，存在返回下标，不存在，为-1
+        console.log(arr.indexOf(6));
+
+        let obj={
+            name:'cai tianzi',
+            age:18
+        }
+        console.log('age' in obj);
+
+
+    </script>
+</body>
+</html>

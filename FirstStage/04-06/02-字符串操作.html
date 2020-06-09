@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    &copy;
+    <script>
+        let str_en='This is web program,it is a good language';
+        let str_zh = '这是一个web编程';
+        let str = new String('I\'m a student');
+        let str1 ='I\'m a student';
+        console.log(str1);
+
+        console.log(str_en.charAt(0));
+        console.log(str_en.charCodeAt(0));
+        console.log(str_zh.charCodeAt(0));
+        console.log(str_en.indexOf('is'));
+        console.log(str_en.lastIndexOf('is'));
+        console.log(str_en);
+        console.log(str_en.split(' '));
+        console.log(str_en.includes('is'));
+        console.log(str_en.match('gooe'));
+        console.log(str_zh.concat(str_en));
+        console.log(str_en);
+        console.log(str_en.substring(1,2));//负数会被当成0
+        console.log(str_en.slice(1,2));//截取的数，不影响原有的数,不包含3
+        console.log(str_en.substr(1,2));
+        console.log(str_en.toLocaleLowerCase());
+        console.log(str_en);
+        console.log(str_en.toLocaleUpperCase());
+        console.log(str_en.replace('is','it'));
+        console.log(str_en.replace('is','it'));
+
+        ////////////**
+         /* 
+            转为字符串的方式
+
+         */
+        
+        let num_1 = 56;
+        console.log(num_1);
+        // num_1 = num_1+'';
+        // num_1 =num_1.toString();
+        // num_1 = String(num_1);
+        // console.log(String(undefined));
+
+
+        let s1 ='张学友';
+        let s2 ='演唱会';
+        console.log('我要去听'+s1+'的'+s2);
+        let ret =`我要去听${s1}的${s2}
+很好听`;
+        console.log(ret);
+        console.log('\u00a9');
+
+
+        // let str_ ='    hello ';
+        // let str_1 =str_.repeat(3);
+        // str_1 = str_1.trim();
+        // console.log(str_1);
+        // console.log(str_);
+        // console.log(str_.trim());
+
+
+        
+        // let xxx='http://www.myhost.com/info.php?title=mytitle&id=5';
+        // // let url='http://locahost/api?title=x&date='+xxx;
+        // let url='http://locahost/api?title=x&date='+encodeURIComponent(xxx);
+        // console.log(url);
+
+        // if(/^[a-zA-Z]$/.test(str_en)){
+        //     console.log("true");
+        // }else{
+        //     console.log('false');
+        // }
+
+        // let han='汉';
+        // let letter='a';
+
+
+
+
+        // let arr1=[1,2,3];
+        // let arr2=[4,5,6];
+
+        // console.log(str_en.charAt(0));
+        // console.log(str_en.startsWith('th'));
+        // console.log(str_en.endsWith('ge'));
+        // console.log(str_en.includes('a'));
+        // // console.log(str_en.match('is'));
+        // console.log(str_en.concat(str_zh));
+        // console.log(arr1.concat(arr2));
+        // console.log(str_en.indexOf('s'));
+        // console.log(str_en.lastIndexOf('s'));
+        // console.log(str_en.slice(0,-1));
+
+        // let num = 5;
+        // num=num.toString();
+        // num=parseInt(num);
+
+        // num2='abc123';
+        // num2=parseInt(num2);
+
+        // console.log(num2);
+    </script>
+</body>
+</html>

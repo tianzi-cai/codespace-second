@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        /* ：hover鼠标悬停时的状态 */
+        .link:hover{
+            color: red;
+        }
+        /* :active鼠标按下未松开的样式 */
+        .link2:active{
+            color: green;
+        }
+
+        .nameInput{
+            border: 2px solid red;
+        }
+        /* focus文本框选中下的状态 */
+        .nameInput:focus{
+            border: 2px solid green;
+        }
+        /* :first-child  匹配第一个子元素 */
+        .box p:first-child{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- css伪类选择器 -->
+    <a href="#" class="link">超链接添加hover样式</a>
+    <a href="#" class="link2">超链接鼠标按下时的状态</a><br>
+    <label for="nameinput">focus文本框选中下的状态</label>
+    <input type="text" class="nameInput" id="nameinput"><br>
+    <div class="box">
+        <p>第一个段落</p>
+        <p>第二个段落</p>
+        <p>第三个段落</p>
+    </div>
+</body>
+</html>

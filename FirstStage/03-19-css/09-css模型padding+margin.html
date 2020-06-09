@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* padding——内边距：边框与内容之间的距离 */
+            /* 1个值 */
+            .box1{
+                width: 500px;
+                height: 20px;
+                border: 1px solid red;
+                padding: 20px;
+            }
+            /* 2个值 */
+            .box2{
+                width: 500px;
+                height: 20px;
+                border: 1px solid red;
+                padding: 20px 30px;
+            }
+            /* 3个值 */
+            .box3{
+                width: 500px;
+                height: 20px;
+                border: 1px solid red;
+                padding: 20px 30px 40px;
+            }
+            /* 4个值 */
+            .box4{
+                width: 500px;
+                height: 20px;
+                border: 1px solid red;
+                padding: 20px 30px 40px 50px;
+            }
+        /* marign——外边距：元素与元素之间的距离 */
+            /* 1个值 */
+            .container1{
+                width: 500px;
+                height: 20px;
+                background-color: seagreen;
+                margin: 20px;
+            }
+            /* 2个值 */
+            .container2{
+                width: 500px;
+                height: 20px;
+                background-color: rgb(36, 10, 151);
+                margin: 20px 30px;
+            }
+            /* 3个值 */
+            .container3{
+                width: 500px;
+                height: 20px;
+                background-color: red;
+                margin: 20px 30px 40px;
+            }
+            /* 4个值 */
+            .container4{
+                width: 500px;
+                height: 20px;
+                background-color: rgb(95, 9, 59);
+                margin: 20px 30px 40px 50px;
+            }
+        /* 行内块display:inline-block; */
+        .inline-b1{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(197, 27, 126);
+            display: inline-block;
+        }
+        .inline-b2{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(58, 14, 158);
+            display: inline-block;
+            margin: 0 30px;
+                /* 设置中间元素，控制两边的距离 */
+        }
+        .inline-b3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(224, 107, 11);
+            display: inline-block;
+        }
+        /* 块元素水平居中 */
+        .box5{
+            width: 200px;
+            height: 200px;
+            background-color: rosybrown;
+            /* 文本居中 */
+            text-align: center;
+            /* 块元素水平居中 */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h3>padding——内边距：边框与内容之间的距离</h3>
+    <div class="box1">content 内容-padding 1个值</div>
+    <div class="box2">content 内容-padding 2个值</div>
+    <div class="box3">content 内容-padding 3个值</div>
+    <div class="box4">content 内容-padding 4个值</div>
+    <h3>marign——外边距：元素与元素之间的距离</h3>
+    <div class="container1">container1——margin 1个值</div>
+    <div class="container2">container2——margin 2个值</div>
+    <div class="container3">container3——margin 3个值</div>
+    <div class="container4">container4——margin 4个值</div>
+    <h3>行内块display:inline-block;</h3>
+    <div class="inline-b1"></div>
+    <div class="inline-b2"></div>
+    <div class="inline-b3"></div>
+    <h4>块元素水平居中</h4>
+    <div class="box5">box5的内容</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* list-style */
+            /* list-style-type */
+                /* 
+                    none: 没有
+                    disc 默认实心圆
+                    squar: 实心方块
+                    decimal:数字
+                */
+            .list1 li{
+                list-style-type: none;
+            }
+            /* list-style-image */
+            .list1 li{
+                list-style-image: url(icon.png);
+            }
+            /* list-style-position */
+            .list2 li{
+                list-style-image: url(icon.png);
+                list-style-position: inside;
+            }
+            .list3 li{
+                list-style: url(icon.png) inside;
+            }
+            /* 常用写法：list-style: none; 
+                等价于 list-style-type:none; 
+            */
+    </style>
+</head>
+<body>
+    <h2>CSS 列表样式</h2>
+    <ul class="list1">
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+        <li>列表项4</li>
+    </ul>
+    <ul class="list2">
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+        <li>列表项4</li>
+    </ul>
+    <ul class="list3">
+        <li>list-style 简写</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+        <li>列表项4</li>
+    </ul>
+    <p>常用写法：list-style: none; 等价于 list-style-type:none;</p>
+</body>
+</html>

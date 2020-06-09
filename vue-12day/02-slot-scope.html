@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <!-- 作用域，name定义在根组件下，在子组件中渲染 -->
+        <my-component>
+            {{name}}
+        </my-component>
+    </div>
+
+    <script>
+        Vue.component("my-component",{
+            template:`
+            <div>
+                <p>第一行</p>
+                <slot></slot>
+                <p>最后一行</p>
+            </div>
+            `,
+        });
+        var app = new Vue({
+            el:"#app",
+            data:{
+                name:"我是根实例作用域下的数据"
+            }
+        });
+
+        // 默认内容
+
+
+    </script>
+    
+</body>
+</html>

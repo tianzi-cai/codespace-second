@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象字面量</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        #dynamicexample {
+            height: 6000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dynamicexample">
+        <div v-demo="{ color: 'white', text: 'hello!' }"></div>
+    </div>
+
+    <script>
+        Vue.directive('demo', function (el, binding) {
+            console.log(binding.value.color) // => "white"
+            console.log(binding.value.text) // => "hello!"
+        })
+
+        new Vue({
+            el: '#dynamicexample'
+        })
+    </script>
+
+
+</body>
+
+</html>

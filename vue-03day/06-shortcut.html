@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩写</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p :title="message">缩写</p>
+        <button @click="btnClick">点我试试</button>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+
+            data :{
+                message:"你好"
+                
+            },
+
+            methods:{
+                btnClick(){
+                    console.log("点我试试");
+                }
+
+            }
+        });
+
+    </script>
+</body>
+</html>

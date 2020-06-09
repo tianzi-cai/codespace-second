@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 220px;
+            height: 160px;
+            background-color: brown;
+            position: relative;
+            overflow: hidden;
+        }
+        .box img{
+            width: 100%;
+        }
+
+        /* 月销 */
+        .box .month{
+            background-color: rgb(241, 103, 53);
+            color: white;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 14px;
+            padding: 1px 10px;
+            border-radius: 0 0 10px 0;
+        }
+
+        /* 圆 */
+        .cir{
+            width: 112px;
+            height: 112px;
+            /* line-height: 56px; */
+            background-color: rgba(0, 0, 0,0.5);
+            text-align: center;
+            /* 设置为50%时，就为圆 */
+            border-radius: 50%;
+            position: absolute;
+            top: 24px;
+            left: 54px;
+            color: white;
+        }
+        .cir p.cirtop{
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid white;
+            padding: 20px 0 5px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .cir p.cirbottom{
+            padding: 5px 0 20px;
+        }
+        .cirbottom .cirbottom-1{
+            font-size: 14px;
+            vertical-align: top;
+        }
+        .cirbottom .cirbottom-2{
+            font-size: 22px;
+            color:  rgb(241, 103, 53);
+        }
+        .cirbottom .cirbottom-3{
+            font-size: 14px;
+        }
+
+        /* 遮罩层 */
+        .mask{
+            width: 220px;
+            height: 160px;
+            background-color: rgba(58, 58, 58, 0.7);
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            line-height: 25px;
+            display: none;
+            cursor: pointer;
+        }
+        .mask .mask-1{
+            font-size: 22px;
+            font-weight: bold;
+            padding: 20px 0 10px;
+        }
+        .mask .mask-2,.mask .mask-3{
+            padding-left: 10px;
+            width: 200px;
+            height: 25px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .mask .mask-4{
+            padding: 10px 0 30px;
+            font-size: 15px;
+        }
+        /* 鼠标悬停的效果 */
+        .box:hover .month{
+            display: none;
+        }
+        .box:hover .cir{
+            display: none;
+        }
+        .box:hover .mask{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="contant">
+        <div class="box">
+            <a><img src="img/xiec.jpg" alt=""></a>
+            <p class="month">月销1000笔</p>
+                <div class="cir">
+                    <p class="cirtop">上海</p>
+                    <p class="cirbottom">
+                        <span class="cirbottom-1">￥</span><span class="cirbottom-2">101</span><span class="cirbottom-3">/人起</span>
+                    </p>
+                </div>
+                <div class="mask">
+                    <p class="mask-1">上海</p>
+                    <p class="mask-2">景点：顾村公园、上海迪士尼度假村</p>
+                    <p class="mask-3">美食：锅贴、蟹宴、酱鸭、腌笃啥啥啥啥啥</p>
+                    <p class="mask-4">立即查看3000条产品></p>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

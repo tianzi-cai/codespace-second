@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let animal = new Map();
+        animal.set('cat','咪咪');
+        animal.set('dog','小黑');
+        animal.set('cat1','咪咪1');
+        animal.set('cat2','咪咪2');
+        let x = animal.get('cat');
+        console.log(x);
+        console.log(animal.size);
+        animal.delete('cat');
+        console.log(animal.has('cat'));
+        console.log(animal);
+
+        for(let [key,value] of animal){
+            console.log(key+','+value);
+        }
+
+        // animal.forEach((key,value) => {
+        //     console.log(key+','+value);
+        // });
+
+        console.log(animal.keys());
+        for(let key of animal.keys()){
+            console.log(key);
+        }
+
+        console.log(animal.values());
+        for(let key of animal.values()){
+            console.log(key);
+        }
+
+        let arr = [[1,2],[2,3]];
+        let arrmap = new Map(arr);
+        let newarr = Array.from(arrmap)
+        console.log(arrmap);
+
+        let firstmap = new Map([[1,'first'],[2,'second']]);
+        let secdmap = new Map([[1,'first'],[3,'third']]);
+
+        let merged =new Map([...firstmap,...secdmap]);
+        console.log(merged);
+
+
+        let num = [1,2,3,4,5,4,3];
+        let nummap =new Set(num);
+        let newnum =Array.from(nummap);
+
+        console.log(newnum);
+
+
+        let mySet = new Set();
+        mySet.add('hello');
+        mySet.add('world');
+        console.log(mySet);
+        console.log(mySet.size)
+
+
+        let [a,b]=[1,2];
+        console.log(a,b);
+
+        let c=4,d=9;
+        console.log(c,d);
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

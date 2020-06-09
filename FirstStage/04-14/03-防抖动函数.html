@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖动函数</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <script>
+        var btn =document.getElementById('btn');
+        function clickMe() {
+            alert('点击我啦');
+        }
+        // btn.onclick =clickMe;
+
+        btn.onclick =debounce(clickMe,1000);
+
+        function debounce(fn,delay) {
+            var timer =null;
+            return function () {
+                // let context =this;
+                clearTimeout(timer);
+
+                timer =setTimeout(function(){
+                    fn.apply(this,arguments[0]);
+                },delay);
+                
+            }
+        }
+        
+
+
+    </script>
+</body>
+</html>

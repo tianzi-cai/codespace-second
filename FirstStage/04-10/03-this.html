@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+
+    <script>
+        console.log(this);
+        function fun() {
+            this.name ='cai';
+            console.log(this);
+        }
+        let c= new fun();
+
+        // function Car() {
+        //     this.name ='baoma';
+        //     console.log(this);
+        // }
+        // let c =new Car();
+        // console.log(c.name);
+
+
+        // let o1 ={
+        //     name:'zhang',
+        //     describe:function(){
+        //         console.log(this);
+        //     }
+        // }
+        // o1.describe();
+
+        // (o1.describe = o1.describe)();
+        // (o1.describe = function(){
+        //     console.log(this);  //window
+        // })();
+
+        // let o2 = {
+        //     p:'hello',
+        //     b:{
+        //        fun:function(){
+        //            console.log(this.p);
+        //        },
+        //        p:'cai',
+        //     }
+        // };
+        // o2.b.fun();
+
+        let o1 = {
+            fun: function(){
+                console.log(this);  //fun
+                that =this;
+                let fun2 = function(){
+                    console.log(that);  //window
+                }
+                fun2();
+            }
+        };
+        o1.fun();
+
+
+        let o3 = {
+            v:'hello',
+            p:['a','b'],
+            fun3: function(){
+                this.p.forEach(function(item){
+                    console.log(this); //window
+                    console.log(this.v + " , " + item);
+                });
+            }
+        };
+        o3.fun3();
+
+
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click",function(e){
+            alert("点击按钮啦");
+            console.log(this);  //当前按钮元素
+        });
+
+
+    </script>
+</body>
+</html>

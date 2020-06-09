@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let sum1=0,sum2=0,i=1,j=1;
+        // while(i<=100){
+        //     sum1 +=i;
+        //     i++;
+        // }
+        // console.log(sum1);
+        
+        // do{
+        //     sum2 +=j;
+        //     j++;
+        // }while(j<=100);
+        // console.log(sum2);
+
+        for(let i=0;i<4;i++){
+            for(let j=0;j<=i;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<hr>");
+
+        for(let i=0;i<4;i++){
+            for(let j=3;j>=i;j--){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<hr>");
+
+        // 九九乘法表
+        let table;
+        for(let i=1;i<=9;i++){
+            for(let j=1;j<=i;j++){
+                table=i*j;
+                document.write(j+"x"+i+"="+table+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+                if(table<10){
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
+            document.write("<br>");
+        }
+
+        document.write("<hr>");
+
+        let num = 0;
+        outPoin:
+        for(let i = 0;i<=4;i++){
+            for(let j = 0;j<=2;j++){
+                if(j == 1){
+                    // break outPoin;
+                }
+                document.write("i=" + i +",j=" + j + "<br>");
+                num ++;
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function requestImg(){
+            let p = new Promise((resolve, reject)=>{
+                let img = new Image();
+                img.onload = function(){
+                    resolve(img);
+                }
+                img.src = "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/43251d567fb38f8c629ad96f9dbe5de7.jpg";
+            });
+            return p;
+        }
+        // 超时函数
+        function timeout(){
+            let p = new Promise((resolve, reject)=>{
+                setTimeout(function(){
+                    reject("图片请求超时");
+                }, 5000);
+            });
+
+            return p;
+        }
+
+        Promise.race([requestImg(),timeout()])
+        .then((result)=>{
+            document.body.appendChild(result);
+            console.log(result);
+        });
+
+
+    </script>
+</body>
+</html>

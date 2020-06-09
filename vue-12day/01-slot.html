@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>插曹内容</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <my-component>
+            这是内容
+        </my-component>
+    </div>
+
+    <script>
+        // slot用于连接html的接口，在template中写入，写在哪，在哪边渲染
+        // 多写时，会重复渲染
+        Vue.component("my-component",{
+            template:`
+            <div>
+                <slot></slot>
+                <p>第一行</p>
+                <slot></slot>
+                <p>最后一行</p>
+                <slot></slot>
+            </div>
+            `,
+        });
+        var app = new Vue({
+            el:"#app"
+        });
+
+
+        // 作用域
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">测试</button>
+    <a href="01-attributes.html" id="link1">kwg </a>
+
+
+
+    <script>
+        // let link1 =document.getElementById('link1');
+        // link1.addEventListener('click',function(e){
+        //     alert('sss');
+        //     e.preventDefault();
+        // });
+
+
+        function hello(a,b) {
+            console.log('hello,world');
+            // console.log(a+b);
+        }
+        let btn1 =document.getElementById('btn1');
+        // // btn1.addEventListener('click',function(){
+        // //     console.log('你点击他了');
+        // // },{once:true});
+        // btn1.addEventListener('click',function(){
+        //     hello(2,3);
+        // },false);
+
+        // btn1.addEventListener('click',function(){
+        //     console.log('你点击他了1');
+        // });
+        // btn1.addEventListener('click',function(){
+        //     console.log('你点击他了2');
+        // });
+        btn1.addEventListener('click',hello,false);
+        // btn1.removeEventListener('click',hello,false);
+        let event =new Event('click');
+        btn1.dispatchEvent(event);
+        // btn1.addEventListener('click',hello,false);
+        // btn1.addEventListener('click',hello,false);
+
+        // function changeHandle() {
+        //     obj.handleEvent =function(){
+        //         alert('改变指定的指向');
+        //     }
+        // }
+        // let btn1 =document.getElementById('btn1');
+        // let obj ={
+        //     name:'foo',
+        //     handleEvent:function(e){
+        //         // alert(this.name);
+        //         console.log(e);
+        //         switch(e.type){
+        //             case 'click':console.log('点击按钮');break;
+        //             case 'mouseover':console.log('鼠标事件');break;
+        //         }
+        //     }
+        // };
+        // btn1.addEventListener('click',obj,false);
+        // btn1.addEventListener('mouseover',obj,false);
+
+
+
+
+
+        // setTimeout(changeHandle(),5000);
+
+
+    </script>
+</body>
+</html>

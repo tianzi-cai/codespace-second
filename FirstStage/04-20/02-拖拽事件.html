@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropzone{
+            height: 100px;
+            border: 1px solid red;
+            margin: 10px 0;
+        }
+        #drogable{
+            background-color: salmon;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="dropzone">
+        <div id="drogable" draggable="true" ondragover="return false">该元素可以拖拽</div>
+    </div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+
+
+    <script>
+        var dragged;
+        document.addEventListener('dragstart',function(event){
+            dragged =event.target;
+            event.target.style.backgroundColor='red';
+        });
+        document.addEventListener('dragend',function(event){
+            event.target.style.backgroundColor='';
+        });
+        document.addEventListener('dragover',function(event){
+            event.preventDefault();
+        });
+        document.addEventListener('dragenter',function(event){
+            if(event.target.className=='dropzone'){
+                event.target.style.backgroundColor='green';
+            }
+        });
+        document.addEventListener('dragleave',function(event){
+            if(event.target.className=='dropzone'){
+                event.target.style.backgroundColor='';
+            }
+        });
+        document.addEventListener('drop',function(event){
+            event.preventDefault();
+            if(event.target.className=='dropzone'){
+                event.target.style.backgroundColor='';
+                dragged.parentNode.removeChild(dragged);
+                event.target.appendChild(dragged);
+            }
+        });
+
+
+
+    </script>
+</body>
+</html>

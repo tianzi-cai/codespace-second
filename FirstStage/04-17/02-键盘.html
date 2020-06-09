@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="intro" cols="30" rows="10"></textarea>
+    <p id="p1">现在是200个字</p> 
+    <script>
+        let intro =document.getElementById('intro');
+        intro.addEventListener('keyup',function(e){
+            let len = e.target.value.length;
+            let p1 =document.getElementById('p1');
+            p1.innerText=200-len;
+        });
+
+
+    </script>
+</body>
+</html>

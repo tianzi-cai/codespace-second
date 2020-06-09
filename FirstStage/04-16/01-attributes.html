@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <a href="http://www.baidu.cn"></a> -->
+    <p id="p1" class="p1_1" title="p1-2">这是一段文字</p>
+    <script>
+        let p =document.querySelector('p');
+        // let id = p.getAttribute('id');
+        console.log(p.getAttributeNames());
+        p.setAttribute('data-id','id-1');
+        console.log(p.hasAttribute('id'));
+        // p.removeAttribute('data-id') ;
+        let datas =p.dataset;
+        datas.id ='这是新修改的id'
+
+        console.log(p);
+        
+        // console.log(p.hasAttributes());
+
+
+    </script>
+</body>
+</html>

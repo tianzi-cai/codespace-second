@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用CSS的border属性编写三角形</title>
+    <style>
+        /* 利用border-weight的每一个边都是三角形 */
+        .box1{
+            width: 0;
+            height: 0;
+            border:50px solid;
+            border-color: brown green red orange;
+            margin-bottom: 20px;
+        }
+        /* 三角形 */
+        .box1-1{
+            width: 0;
+            height: 0;
+            border:50px solid;
+            border-color: transparent green transparent transparent;
+            /* border-color: brown transparent transparent transparent; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box1-1"></div>
+</body>
+</html>

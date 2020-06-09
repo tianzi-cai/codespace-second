@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    &copy;
+    <ul id="nav">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <script>
+        let nav =document.getElementById('nav');
+        nav.addEventListener('click',function(e){
+            let tag =e.target;
+            console.log(tag);
+            let text =tag.innerText;
+            console.log(text);
+        })
+
+        // function fun() {
+        //     // // return this.name;
+        //     // console.log(this.name);
+        //     // console.log('hello world');
+        // }
+        // function Car() {
+        //     // if( !(this instanceof Car)){
+        //     //     return new Car();
+        //     // }
+        //     // console.log(this);
+        //     if( !(new.target ==Car)) {
+        //         return new Car();
+        //     }
+        //     this.name ='大众';
+        //     this.price =200;
+        //     this.greeting =fun();
+        //     this.describle =function(){
+        //         console.log(this);
+        //         return this.name;
+        //     }
+        //     // console.log(this.greeting);
+        // }
+        // let c1 = Car();
+        // let f =Car();
+        // console.log(c1.describle());
+        // console.log(f.describle());
+        // let c2 =Object.create(Car());
+        // console.log(c1);
+        // let c2 ={};
+        // c2.fun =c1.fun;
+        // c2.fun =function(){
+        //     console.log('world');
+        // }
+        // c1.fun()
+        // c2.fun();
+        // c2.name ='大奔';
+
+        // console.log(c2.price);
+        // console.log(c1);
+
+
+        // console.log("3. 对象的方法中使用this");
+        // let o1 = {
+        //     name: 'zhang',
+        //     describe:function(){
+        //         console.log(this);
+        //     }
+        // };
+        // o1.describe();
+
+        // let o1 = {
+        //     p1: "hello world"
+        // };
+        // let f1 = function(){
+        //     console.log(this);
+        //     return this;
+        // }
+        // let f2 = f1();  // window
+        // console.log(f2);  //f2 == window
+        
+        // var module1 = (function(){
+        //     var _count = 1;
+        //     var m1 = function(){
+        //         console.log("hello" + _count);
+        //     };
+        //     var m2 = function(){
+        //         console.log("world");
+        //     }
+        //     var m3 = function(){
+        //         console.log("m3");
+        //     };
+        //     return{
+        //         fun1: m1,
+        //         fun2: m2
+        //     }
+        // })();
+     
+
+        // // 宽放大模式
+        // var module2 = (function(mod){
+        //     mod._count = 1;
+        //     mod.m1 = function(){
+        //         console.log("hello" + _count);
+        //     };
+        //     mod.m2 = function(){
+        //         console.log("world");
+        //     }
+        //     mod.m3 = function(){
+        //         console.log("m3");
+        //     };
+        //     return mod;
+        // })(window.module2 || {});
+
+        // console.log(module2.mod);
+
+
+        
+
+
+    </script>
+</body>
+</html>

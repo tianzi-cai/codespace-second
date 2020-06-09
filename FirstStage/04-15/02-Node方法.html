@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" class="div_1"> 
+        <h1 id="h1">这里是div1</h1> 
+    </div>
+    <script>
+        let div1 =document.getElementById('div1');
+        let div2 =document.createElement('div');
+        div2.textContent ='添加一个div2';
+        div1.appendChild(div2);
+        let h2 =document.createElement('h2');
+        h2.innerHTML='这是一个二级标题';
+        let h1 =document.getElementById('h1');
+        div1.insertBefore(h2,h1);
+        let span =document.createElement('span1');
+        span.textContent='这是一个替换的span节点';
+        div1.replaceChild(span,h1);
+        div1.removeChild(div2);
+        console.log(h1.hasChildNodes());
+
+        let div_1 =document.querySelector('.div_1').cloneNode(true);
+        div1.appendChild(div_1);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function add(a,b,c){
+        //     for(let i=0;i<arguments.length;i++){
+        //         console.log(arguments[i]);
+        //     }
+        //     return a+b+c;
+        // }
+        // console.log(add(1,2,3,4,5,6,7)); 
+
+        // function add2(a){
+        //     let result="";
+        //     for(let i=1;i<arguments.length;i++){
+        //         if(i==arguments.length-1){
+        //             result +=arguments[i];
+        //         }else{
+        //             result +=arguments[i]+a;    
+        //         }
+        //     }
+        //     console.log(result);
+        // }
+        // add2("-","red","blue","yellow");
+
+        // function multiply(a=1,b=2){
+        //     return a*b;
+        // }
+        // console.log(multiply(4));
+
+        function fun(a,b,...c){
+            console.log(a);
+            console.log(b);
+            for(let i=0;i<c.length;i++){
+                console.log(c[i]);
+            }
+        }
+        fun(1,4,5,3,5,8,2);
+    </script>
+</body>
+</html>

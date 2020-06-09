@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* outline不占用空间，与margin有关，形状左边会被覆盖 */
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            outline: 10px dotted green;
+        }
+        /* display属性 */
+        /* div变为行内元素 */
+        .dis-inline{
+            background-color: greenyellow;
+            /* 设置为行内元素后，margin的左右就不生效了 */
+            margin: 100px;
+            /* height: 100px; */
+            display: inline;
+        }
+        /* span变为块元素 */
+        .dis-block{
+            background-color: hotpink;
+            display: block;
+            margin: 10px;
+            height: 100px;
+        }
+        /* div+span */
+        .dis-inline-block{
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            background-color: red;
+            /* display: inline; */
+            display: block;
+        }
+        /* display:none重点 */
+        /* a标签为按钮模式 */
+        .change{
+            text-decoration: none;
+            display: block;
+            width: 200px;
+            height: 20px;
+            color: white;
+            text-align: center;
+            background-color: saddlebrown;
+        }
+        .dis-none{
+            height: 100px;
+            margin-top: 20px;
+            background-color: wheat;
+            display: none;
+        }
+        .change:hover + div{
+            /* background-color: tomato; */
+            /* display: inline; 行内元素显示*/
+            display:block;
+            /* 块元素显示,根据需求,display显示为block或inline */
+        }
+        /* 使用visibility 属性显示和隐藏元素 */
+        .vi{
+            height: 100px;
+            background-color: yellow;
+            visibility: hidden;
+        }
+        .vi2{
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS 轮廓 -->
+    <div class="box">带有轮廓的div</div>
+    <!-- display属性——inline,inline-block,block,none -->
+    <div class="dis-inline">inline 的block</div>
+    <div class="dis-inline">inline 的block</div><br>
+    <!-- display-bolck -->
+    <span class="dis-block">display block 的span</span>
+    <span class="dis-block">display block 的span</span>
+    <!-- display属性——inline,inline-block,block,none -->
+    <div class="dis-inline-block">display inline-block 的block</div>
+    <span class="dis-inline-block">display inline-block 的span</span>
+   
+    <!-- display none -->
+    <a href="" class="change">显示或隐藏下面的div</a>
+    <div class="dis-none">display  none 的div</div>
+    
+    <!-- 使用visibility 属性显示和隐藏元素 -->
+    <div class="vi">显示的div</div>
+    <div class="vi2">显示的div</div>
+</body>
+</html>

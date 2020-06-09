@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            height: 100px;
+            width: 200px;
+            background-color: brown;
+            /* 如果设置了定位方式，元素会脱离标准文档流 */
+            position: relative;
+            left: 100px;
+            top:200px;
+            /* 使用z-index可以改变层叠性 */
+            z-index: 2;
+        }
+        .box2{
+            height: 200px;
+            background-color: cadetblue;
+            position: relative;
+            right: 100px;
+            /* top: 400px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">相对定位的div</div>
+    <div class="box2">
+        相对定位div设置right
+    </div>
+</body>
+</html>

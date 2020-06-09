@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <my-component-name></my-component-name>
+    </div>
+
+    <script type="module">
+
+        import {MyComponentName} from "./js/a.js";
+
+        var app = new Vue({
+            el:"#app",
+            components:{
+                "my-component-name":MyComponentName
+            }
+        });
+    </script>
+    <!-- <script type="module">
+        import {a,b} from "./js/a.js";
+        console.log(a);
+        console.log(b);
+
+    </script> -->
+</body>
+</html>

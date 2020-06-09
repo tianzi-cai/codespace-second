@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+em{
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+.aside{
+    width: 80px;
+    height: 500px;
+    background-color: #fff;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    border: 1px solid #f5f5f5;
+}
+.aside > div{
+    width: 80px;
+    height: 100px;
+    text-align: center;
+    padding-top: 20px;
+    line-height: 30px;
+    border-bottom: 1px solid #f5f5f5;
+}
+.aside div a{
+    color: #757575;
+    font-size: 14px;
+}
+.aside div em{
+    font-size: 35px;
+}
+.aside div:hover a{
+    color: #ff6700;
+}
+
+/* 鼠标悬停 */
+.app-boxP{
+    position: relative;
+}
+.app-box{
+    position: absolute;
+    border: 1px solid red;
+    right: 100px;
+    top: 0px;
+}
+.app-box p{
+    font-size: 14px;
+    color: red;
+    margin: 0;
+}
+.app-box img{
+    width: 100px;
+}

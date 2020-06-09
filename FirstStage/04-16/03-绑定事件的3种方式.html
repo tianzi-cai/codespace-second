@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" onclick="console.log('父元素的div');">
+        <button id="btn1" onclick="console.log('点击了按钮');">按钮</button>
+    </div>
+
+    <div id="div2" >
+        <button id="btn2" >按钮</button>
+    </div>
+    <button id="btn3" >按钮</button>
+
+
+
+    <script>
+        let div2 =document.getElementById('div2');
+        let btn2 =document.getElementById('btn2');
+        div2.addEventListener('click',function () {
+            console.log('父元素的div');
+        },true);
+        btn2.addEventListener('click',function () {
+            console.log('点击了按钮');
+        },true);
+        btn2.addEventListener('click',function () {
+            console.log('点击了按钮1');
+        },true);
+
+        let btn3 =document.getElementById('btn3');
+        btn3.onclick =function(){
+            console.log('点击了按钮3');
+        }
+        btn3.onclick =function(){
+            console.log('点击了按钮4');
+        }
+
+
+    </script>
+</body>
+</html>

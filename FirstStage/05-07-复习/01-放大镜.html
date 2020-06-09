@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>放大镜</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .pic{
+            width: 613px;
+            height: 230px;
+            /* border: 1px solid red; */
+            margin-top: 30px;
+            margin-left: 30px;
+            position: relative;
+        }
+        .pic img{
+            width: 613px;
+            height: 230px;
+        }
+        .cover{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(97, 97, 97);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.4;
+            display: none;
+        }
+        .mirror{
+            width: 230px;
+            height: 230px;
+            /* border: 1px solid red; */
+            position: absolute;
+            left: 653px;
+            top: 30px;
+            background: url('img/banner-01.jpg');
+            background-position: 10% 10%;
+            display: none;
+        }
+
+        /* 选择的图片 */
+        .imgs{
+            margin-top: 10px;
+            margin-left: 30px;
+            width: 613px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .imgs img{
+            width: 115px;
+            height: 43px;
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="pic">
+            <img src="img/banner-01.jpg" alt="">
+            <div class="cover"></div>
+        </div>
+        <div class="mirror"></div>
+    </div>
+    <div class="imgs">
+        <img src="img/banner-01.jpg" alt="">
+        <img src="img/banner-02.jpg" alt="">
+        <img src="img/banner-03.jpg" alt="">
+        <img src="img/banner-04.jpg" alt="">
+        <img src="img/banner-05.jpg" alt="">
+    </div>
+
+    <script>
+        let pic = document.querySelector('.pic');
+        let cover =document.querySelector('.cover');
+        let mirror = document.querySelector('.mirror');
+
+        let newimg =document.querySelector('.pic img');
+
+        pic.addEventListener('mouseenter',function(){
+            cover.style = 'display:block';
+            mirror.style = 'display:block';
+        });
+
+        pic.addEventListener('mousemove',function(e){
+            let newurl = newimg.src;
+            mirror.style.background = "url("+newurl+")" ;
+
+            // 获取鼠标在图片的坐标
+            var mouseX = e.clientX;
+            var mouseY = e.clientY;
+
+            // 获取图片在页面的位置
+            var picLeft = pic.getBoundingClientRect().left;
+            var picTop = pic.getBoundingClientRect().top;
+
+            // cover的位置
+            var x = mouseX - picLeft -50;
+            var y = mouseY - picTop -50;
+
+            // 判断超出
+            if(x<0){
+                x=0;
+            }
+            if(y<0){
+                y=0
+            }
+            if(x>513){
+                x=513;
+            }
+            if(y>130){
+                y=130;
+            }
+
+            cover.style.left =x+'px';
+            cover.style.top =y+'px';
+
+            // 在右侧放大
+            mirror.style.backgroundPosition = x/510*100+'%'+" "+y/130*100+'%';
+
+        });
+
+        pic.addEventListener('mouseleave',function(){
+            cover.style = 'display:none';
+            mirror.style = 'display:none';
+        });
+        
+        // 小图片
+        let imgs = document.querySelectorAll('.imgs img');
+        imgs.forEach((item,index)=>{
+            item.addEventListener('mouseenter',function(){
+                item.style.border ='2px solid red';
+                newimg.src = item.src;
+            });
+            item.addEventListener('mouseleave',function(){
+                item.style.border ='';
+            });
+        });
+    </script>
+</body>
+</html>

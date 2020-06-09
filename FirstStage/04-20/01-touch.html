@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>touch事件</title>
+</head>
+<body>
+    <h2>测试touche事件</h2>
+    <div id="testTouch" style="height: 300px;border: 1px solid red;">
+        <div id="clientDiv"></div>
+        <div id="screenDiv"></div>
+        <div id="pageDiv"></div>
+    </div>
+    <script>
+        function load(){
+            let testTouch = document.getElementById("testTouch");
+            testTouch.addEventListener("touchstart", touch, false);
+            testTouch.addEventListener("touchmove", touch, false);
+            testTouch.addEventListener("touchend", touch, false);
+
+            function touch(event){
+                event = event || window.event;
+                let clientDiv = document.getElementById("clientDiv");
+                let screenDiv = document.getElementById("screenDiv");
+                let pageDiv = document.getElementById("pageDiv");
+              //  console.log(event);
+
+                switch(event.type){
+                    case "touchstart":
+                        clientDiv.innerHTML = "Touch start client:" + event.touches[0].clientX + "," + event.touches[0].clientY;
+                        screenDiv.innerHTML = "Touch start screen:" + event.touches[0].screenX + "," + event.touches[0].screenY;
+                        pageDiv.innerHTML = "Touch start page:" + event.touches[0].pageX + "," + event.touches[0].pageY;
+                        break;
+                    case "touchend":
+                        clientDiv.innerHTML = "Touch end client:" + event.changedTouches[0].clientX + "," + event.changedTouches[0].clientY;
+                        screenDiv.innerHTML = "Touch end screen :" + event.changedTouches[0].screenX + "," + event.changedTouches[0].screenY;
+                        pageDiv.innerHTML = "Touch end page :" + event.changedTouches[0].pageX + "," + event.changedTouches[0].pageY;
+                        break;
+                    case "touchmove":
+                        event.preventDefault();
+                        clientDiv.innerHTML = "Touch moved client:" + event.touches[0].clientX + "," + event.touches[0].clientY;
+                        screenDiv.innerHTML = "Touch moved screen :" + event.touches[0].screenX + "," + event.touches[0].screenY;
+                        pageDiv.innerHTML = "Touch moved page :" + event.touches[0].pageX + "," + event.touches[0].pageY;
+                        break;
+                }
+            }
+        }
+        window.addEventListener("load", load, false);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for指令使用对象</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(value,name,index) in obj">
+                {{index}}-{{name}}-{{value}}
+            </li>
+        </ul>
+        
+    </div>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                obj:{
+                    name:"小明",
+                    sex:"男",
+                    desc:"高富帅"
+                }
+                
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

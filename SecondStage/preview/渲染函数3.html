@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>节点</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="dynamicexample">
+
+
+    <anchored-heading :blogTitle>
+      <div>
+        <h1>{{ blogTitle }}</h1>
+        Some text content
+        <!-- TODO: Add tagline -->
+      </div>
+    </anchored-heading>
+  </div>
+
+  <script>
+    Vue.component('anchored-heading', {
+      props:["blogTitle"],
+
+      render: function (createElement) {
+        return createElement('h1', this.blogTitle)
+      },
+    });
+
+    var vm = new Vue({
+      el: '#dynamicexample'
+    })
+  </script>
+
+
+</body>
+
+</html>

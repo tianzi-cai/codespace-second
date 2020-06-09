@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://www.baidu.com.cn" onsubmit="return checkForm()">
+        
+        <p>用户名:<input type="text" name="" id="username" placeholder="请输入6-12的字母或数字"></p>
+        <P>
+            <input type="submit" value="注册">
+
+        </P>
+
+    </form>
+    <script>
+        function checkForm(){
+            let usernameValue = document.getElementById("username").value;
+            // alert(usernameValue);
+
+            let rez =/^[a-zA-Z0-9]{6,12}$/;
+
+            if(!rez.test(usernameValue)){
+                alert('请正确填写用户名');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

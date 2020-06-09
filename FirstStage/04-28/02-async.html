@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function timeout(ms) {
+        //     return new Promise((resolve,reject)=>{
+        //         console.log('promise');
+        //         setTimeout(resolve,ms,'这是个参数');
+        //     });
+        // }
+
+        //  function asyncFun(value,ms) {
+        //     // await timeout(ms);
+        //      timeout(ms).then(function(data){
+        //         console.log(data);
+        //     });
+        //     console.log(value);
+        // }
+
+        // asyncFun('hello world',500);
+
+
+        async function asyncFun(str) {
+            return await new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(str)
+                },500);
+            });
+        }
+
+        // const serialFn = async() =>{
+        //     console.time('serialFn');
+        //     console.log(await asyncFun('string 1'));
+        //     console.log(await asyncFun('string 2'));
+        //     console.timeEnd('serialFn');
+        // }
+        // serialFn();
+
+
+        const serialFn = async() =>{
+            console.time('serialFn');
+            const serialOne =asyncFun('string 1');
+            const serialTwo =asyncFun('string 2');
+            console.log(await serialOne);
+            console.log(await serialTwo);
+            console.timeEnd('serialFn');
+        }
+        serialFn();
+
+    </script>
+</body>
+</html>

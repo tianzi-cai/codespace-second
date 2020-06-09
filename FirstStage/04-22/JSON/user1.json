@@ -1,0 +1,17 @@
+[
+    {
+        "username": "zhangsan1",
+        "age":19,
+        "address": "suzhou"
+    },
+    {
+        "username": "lisi1",
+        "age":18,
+        "address": "wuxi"
+    },
+    {
+        "username": "wangwu1",
+        "age":21,
+        "address": "shanghai"
+    }
+]

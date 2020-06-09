@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let o1 ={
+            p1:'hello world'
+        };
+
+        let f1 =function(){
+            console.log(this);
+            return this;
+        }
+        f1();
+        console.log(f1.call(false));
+
+        let o3= {
+            name:'cai'
+        }
+        console.log(o3.hasOwnProperty('toString'));//false
+        console.log(o3.hasOwnProperty('name'));
+        //改写,违反了规则，改动了原生方法
+        o3.hasOwnProperty =function(){
+            return true;
+        };
+        console.log(o3.hasOwnProperty('toString'));//此时为true
+        console.log(o3.hasOwnProperty('name'));
+
+        //用下面的方法可操作出正确结果
+        console.log(Object.prototype.hasOwnProperty.call(o3,'toString')); //false
+        console.log(Object.prototype.hasOwnProperty.call(o3,'name')); //true
+        console.log(Object.prototype.hasOwnProperty.call(o3,'age')); //false
+
+
+    </script>
+</body>
+</html>

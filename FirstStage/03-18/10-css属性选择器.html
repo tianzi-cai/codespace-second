@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 11.属性选择器 */
+
+        /* 具有一个属性 */
+        a[data-title]{
+            background-color: orange;
+        }
+
+        /* 同时具有2个属性 */
+        a[title][data-id]{
+            background-color: orchid;
+        }
+
+        /* 属性=某个值 */
+        a[title="link4"]{
+            background-color: palegreen;
+        }
+
+        /* 匹配开头 */
+        p[data-title^="t"]{
+            color: palegreen;
+        }
+        p[data-title|="para"]{
+            color: red;
+        }
+
+        /* 匹配结尾 */
+        p[data-title$="e"]{
+            color: palevioletred;
+        }
+
+        /* 匹配包含 */
+        p[data-title*="n"]{
+            color: rebeccapurple;
+        }
+
+        /* 属性选择器在form表单中的应用 */
+        input[type="text"]{
+            border: 1px solid red;
+        }
+
+        input[name*="user"]{
+            border: 2px solid lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- a标签下的css属性选择器 -->
+
+    <!-- data-title是自定义属性，建议data-* -->
+    <a href="#" title="link1" data-title="test">超链接1</a>
+    <a  title="link2">超链接2</a>
+    <a href="#" title="link3" data-id="123">超链接3</a>
+    <a  title="link4">超链接4</a>
+
+    <!-- 匹配查找,修改样式:^,|,$,*等 -->
+    <p title="p标签" data-title="para">具有title属性，具有data-title="para title1"属性的p1</p>
+    <p title="p标签" data-title="para title">具有title属性，具有data-title="para title"属性的p2</p>
+    <p title="p标签" data-title="test">具有title属性，具有data-title="test"属性的p3</p>
+    <p title="p标签" data-title="laston">具有title属性，具有data-title="laston"属性的p4</p>
+
+    <!-- 属性选择器在form表单中的应用 -->
+    <form action="">
+        <input type="text"><br> 
+        <input type="password" name="userpwd"><br>
+        <input type="number" name="userage" ><br>
+    </form>
+</body>
+</html>

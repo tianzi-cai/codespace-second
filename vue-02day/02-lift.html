@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+
+    <script>
+
+        var app =new Vue({
+            el:"#app",
+            data:{
+                message:"你好啊"
+            },
+
+            beforeCreate(){
+                console.log(this.message);
+            },
+
+            created(){
+                console.log(this.message);
+            },
+
+            beforeMount(){
+                console.log(this.$el);
+            },
+
+            mounted(){
+                console.log(this.$el);
+            },
+
+            beforeUpdate(){
+                console.log(this.message);
+            },
+
+            updated(){
+                console.log(this.message);
+            },
+
+            beforeDestroy(){
+                console.log(this.message);
+            },
+
+            destroyed(){
+                console.log(this.message);
+            }
+
+        });
+
+        
+
+
+    </script>
+</body>
+</html>

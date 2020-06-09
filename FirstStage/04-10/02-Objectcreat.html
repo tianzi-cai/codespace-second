@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let person ={
+        //     name :'zhang',
+        //     age :19,
+        //     greeting : function(){
+        //         console.log('hello',this.name);
+        //     },
+        //     // console.log(this),
+        //     describle : function(){
+        //         return '姓名'+this.name+'年龄'+this.age;
+        //     }
+        // };
+        // let person2 ={
+        //     name:'lisi',
+
+        // };
+        // person2.describle =person.describle;
+        // console.log(person2);
+        // console.log(person);
+        // let person = {
+        //     name: 'Zhangsan',
+        //     age: 19,
+        //     describe:function(){
+        //         return "姓名：" + this.name + ", 年龄：" + this.age;
+        //     }
+        // };
+        // console.log(person.describe());
+
+        // let person2 = {
+        //     name: 'lisi',
+        //     age: 20
+        // };
+        // console.log(person2);
+        // person2.describe = person.describe;
+        // console.log(person2);
+        // console.log(person2.describe());
+
+        // function fun(){
+        //     return "Hi, " + this.name;
+        // }
+        // let A = {
+        //     name: 'zhangsan',
+        //     greeting: fun
+        // };
+        // let B = {
+        //     name: 'lisi',
+        //     greeting: fun
+        // }
+        // console.log(A.greeting());  //Hi, zhangsan
+        // console.log(B.greeting());
+        let C = {
+            name:'zhangsan',
+            describe:function(){
+                console.log(this);
+                return '姓名：' + this.name;
+            }
+        };
+        console.log(C.describe());
+
+        var name = "王五"; 
+        let f = C.describe;  //this指向Window
+        console.log(f());  // 姓名：王五
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

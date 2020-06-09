@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <!-- type="hidden" 是隐藏的文本框，页面中看不见，但是代码中存在，数据可以提交给后台 -->
+        <input type="hidden" name="htext" value="abc">
+        <!-- 
+            input 文本属性（text，password）
+                1、placeholder：占位符，用于提示用户；
+                2、size：当前文本框可输入字段的数量；
+                3、maxlength：当前文本框输入的最多字符数，一个汉字是两个字符，一个字母数字是一个；
+                4、value：当前文本框的默认值；
+                5、required：当前文本框要求内容是必填项！否则无法提交；
+                6、readonly：只读文本框，用户不可修改；
+                7、disabled:不可用的文本框
+         -->
+        <!-- 文本框提示：placeholder -->
+        <label for="username">用户名：</label>
+        <input type="text" name="uname" id="username" placeholder="请输入用户名" ><br>
+        <!-- 输入字段的数量:size -->
+        <label for="username-1">用户名：</label>
+        <input type="text" name="uname" id="username-1" placeholder="字段的数量" size="10" ><br>
+        <!-- 文本框最大数量：maxlength -->
+        <label for="username">用户名：</label>
+        <input type="text" name="uname" id="username" placeholder="文本框最大数量" maxlength="10"><br>
+        <!-- 必填项：required -->
+        <label for="username">用户名：</label>
+        <input type="text" name="uname" id="username" required placeholder="必填项"><br>
+         <!-- 只读文本框：readonly -->
+        <label for="readonlyText">只读文本框：</label>
+        <input type="text" name="rText" id="readonlyText" readonly><br>
+         <!-- 不可用文本框：disabled -->
+        <label for="disabledTest">不可用的文本框：</label>
+        <input type="text" name="dText" id="disabledTest" disabled><br>
+         <!-- 设置文本框的宽度 -->
+        <label for="1Text">设置文本框宽度：</label>
+        <input type="text" name="1Text" id="1Text" size="100"><br>
+
+        <!-- 
+            input 单选和多选属性（radio,checkbox）
+                checked：默认选中
+         -->
+        <!-- 性别（单选） -->
+        <label for="sex">性别：</label>
+        <input type="radio" name="usex" id="sex" value="1">男
+        <input type="radio" name="usex"  value="2" checked>女<br>
+        <!-- 爱好（多选） -->
+        <label for="game">爱好：</label>
+        <input type="checkbox" name="unhobby" value="games" id="game">打游戏
+        <input type="checkbox" name="unhobby" value="sleep" checked >睡觉
+        <input type="checkbox" name="unhobby" value="eat" >吃
+        <input type="checkbox" name="unhobby" value="doudou" checked>打豆豆<br> 
+
+        <!-- 
+            input 提交、清空及普通按钮属性（submit,reset,button）
+                disabled:不可用按钮；
+         -->
+        <!-- 提交、清空及普通按钮 -->
+        <input type="submit" value="提交" name="usubmit" >
+        <input type="reset" value="清空" name="ureset" disabled>
+        <input type="button" value="普通按钮" name="ubutton" disabled>
+    </form>
+</body>
+</html> 

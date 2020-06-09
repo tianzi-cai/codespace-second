@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let x=-1;
+        // if(x<0){
+        //     throw new Error(小于0);
+        // }else{
+        //     console.log("hello");
+        // }
+
+        // let arr= new Error("出错啦");
+        // console.error(arr.message);
+        // console.log(arr.message);
+
+        // throw 42;
+        // throw 'catch';
+        // throw false   
+
+        function UserError(message){
+            this.message=message||'默认信息';
+            this.name='UserError';
+        }
+        UserError.prototype=new Error();
+        UserError.prototype.constructor=UserError;
+
+        // throw new UserError("出错啦");
+
+        // console.log("hello");
+
+        try{
+            throw new UserError("出错啦");
+            console.log("hello，我这边是try啦，你成功啦");
+        }catch(e){
+            console.log("我这边是catch啦，你出错啦");
+            console.log("name="+e.name +"  "+ "message=" +e.message);
+        }finally{
+            console.log("最后一步啦，我也不知道你有没有错误呢，但你可以看信息哦");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age=12;
+        let str="abc";
+        console.log("age=" +age +"str=" + str);
+        let num="14.2";
+        console.log(age+parseFloat(num));
+
+        let floatNum=123.4;
+        console.log(floatNum);
+
+        let num2=18;
+        let num3=18+"";
+        console.log(num2);
+        console.log(num3);//变为字符串
+
+        let fName="zhang";
+        console.log(fName.length);//测长度
+
+        let longstr="first line\n"+
+        "second line\n"+fName+"\n"+
+        "third line"
+        ;
+        console.log(longstr);
+
+        let longstr2=`first line
+second line ${fName}
+third line`;
+        console.log(longstr2);
+
+        let str3="he's smart";
+        console.log(str3);
+
+        let str4='he\'s smart';
+        console.log(str4);
+
+        let num4=0B101;//二进制
+        console.log(num4);
+
+    </script>
+</body>
+</html>

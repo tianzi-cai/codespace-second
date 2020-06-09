@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [2,33,4,5,3,6,1];
+        for(let i=0;i<arr.length-1;i++){
+            let done = true;
+            for(let j=0;j<arr.length-1-i;j++){
+                if(arr[j] > arr[j+1]){
+                    [arr[j],arr[j+1]]=[arr[j+1],arr[j]];
+                    done =false;
+                }
+            }
+            if(done){
+                break;
+            }
+        }
+        console.log(arr);
+
+    </script>
+</body>
+</html>

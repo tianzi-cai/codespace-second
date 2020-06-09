@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.通配符“*” */
+        /* 
+            清除浏览器默认样式，如padding，margin等
+            统一当前页面所有标签的样式，如字体，字号，颜色等
+         */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* 2、标签选择器 */
+        p{
+            color: red;
+        }
+        div{
+            color: rosybrown;
+        }
+        /* 3、类选择器 */
+        .p3{
+            color: green;
+        }
+        /* 4、id选择器-优先级高 */
+        #p4{
+            color: blue;
+        }
+        /* 5、分组选择器 */
+        /* 
+            可以将g-div和g-p有同等样式的内容写在一起
+         */
+        .g-div,.g-p{
+            color: orange;
+            font-size: 20px;
+        }
+        .g-div{
+            background-color: #ccc;
+        }
+        /* 6、组合选择器 */
+        h4.p3{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标签选择器 -->
+    <p>段落标签内容</p>
+    <p>第二个段落标签内容</p>
+    <div>div标签内容</div>
+    <!-- 类选择器 -->
+    <p class="p3">带有class属性的p标签</p>
+    <p class="p3">带有class属性的p标签</p>
+    <!-- id选择器 -->
+    <p id="p4" class="p3">带有id属性的p标签</p>
+    <!-- 分组选择器 -->
+    <div class="g-div">分组选择器的div</div>
+    <p class="g-p">分组选择器的p标签</p>
+    <!-- 组合选择器 -->
+    <p class="p3">带有class属性的p标签</p>
+    <p class="p3">带有class属性的p标签</p>
+    <h4 class="p3">带有class属性的h4标签</h4>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            /* margin: 30px; */
+            height: 300px;
+            width: 50px;
+            background-color: chartreuse;
+        }
+        .child{
+            height: 100px;
+            width: 100px;
+            background-color: chocolate;
+            /* 如果父元素没有设置position除了static之外的值属性，则相对于浏览器窗口的位置 */
+            position: absolute;
+            left: 100px;
+            top: 50px;
+        }
+
+        .parent2{
+            height: 300px;
+            width: 200px;
+            background-color: chartreuse;
+            /* 如果父元素设置除了static之外的属性，则会相对于父元素的位置 */
+            position: relative;
+            /* 父元素设置position可以是relative/absolute/fixed */
+        }
+        .child2{
+            height: 100px;
+            width: 100px;
+            background-color: chocolate;
+            /* 如果父元素没有设置position除了static之外的值属性，则相对于浏览器窗口的位置 */
+            position: absolute;
+            left: 100px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">父元素没有设置position属性子元素绝对定位</div>
+    </div>
+
+    <br>
+    <div class="parent2">
+        <div class="child2">父元素没有设置position属性子元素绝对定位</div>
+    </div>
+</body>
+</html>

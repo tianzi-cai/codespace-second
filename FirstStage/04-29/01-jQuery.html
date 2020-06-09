@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <a id="link1" href="index.html" title="获取更多信息" data-id="111" data-name="more-name">more....</a>
+    <ul class="menu">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+    </ul>
+
+    <script>
+        let link1 =$('#link1');
+        link1.attr('title','get some information') ;
+        // link1.removeAttr('title');
+        console.log(link1.attr('title')) ;
+        link1.data('id',222);
+        console.log( link1.data('id'));
+        console.log( link1.data('name'));
+
+        let menu =$('.menu');
+        menu.append('<li>new li</li>');
+
+        let newli1 =document.createElement('li');
+        newli1.innerHTML ='<span>document li</span>';
+
+        menu.append($(newli1));
+
+        let newli2 =$('<li>jQuery li</li>');
+        menu.append(newli2);
+
+        let newli3 =$('<li>lli3,appendTo menu最后面</li>');
+        newli3.appendTo(menu);
+
+        let newli4 =$('<li>lli4,prependTo menu最前面</li>');
+        newli4.prependTo(menu);
+
+        //兄弟节点
+        let newli5 =$('<li>lli5,兄弟节点after</li>');
+        let firstLi =menu.find('li:first');
+        firstLi.css('color','red');
+        // firstLi.before(newli5);
+        newli5.insertBefore(firstLi);
+
+        // let newli6 =$('<li>lli6,删除</li>');
+        // newli5.remove();
+        // newli5.empty();
+        // menu.empty();
+        // menu.remove();
+
+        newli5.replaceWith(newli1);
+
+
+
+
+
+
+
+    
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

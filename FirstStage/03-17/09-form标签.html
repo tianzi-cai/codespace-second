@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form表单：
+            action:提交的地址或接口，将表单的信息提交给指定的地址；
+            action="#"或者"""没有任何内容，效果是一样的，都是提交到当前页面；
+            method:当前表单信息是以哪种方式提交给后台的，如post,get,delete等；
+                A、method="get"(默认)，表单中的数据所有的参数会以键值对的形式拼接在action制定的地址上,
+                如：http://127.0.0.1:5500/09-form%E6%A0%87%E7%AD%BE.html?uname=123&upwd=123
+                键值对：uname=abc,upwd=abc
+                    地址拼接规则：
+                    1、表单所有的参数以？开头
+                    2、以键值对的形式出现，如uname=pwd
+                    3、不同键值对之间是&拼接
+
+                    get请求的长度有限，一般控制在2M以内，如果超过，有些浏览器就会提交失败
+                    get请求不安全，密码会显示在上面
+
+                B、method="post"最常用，比如登录、注册、上传文件，上传头像，信息比较多等；
+                使用post比较安全，参数不会显示在url上
+                post请求数据的长度没有限制
+    -->
+    <form action="" method="GET">
+        用户名：<input type="text" name="uname"><br>
+        密码：<input type="password" name="upwd" id="upassword"><br>
+        <input type="submit" value="提交">
+    </form>
+    <br>
+    <!-- form表单-input：
+            name属性-必填 指定当前元素的值所对应后台的类型
+            type属性-指定类型
+                    text：文本框
+                    password:密码
+                    number：数字框（h5新增功能）
+                    radio:单选按钮 同一组name值要一样
+                    checkbox:多选 同一组name值要一样
+                    submit:提交表单
+                    reset：清空表单
+                    button:普通按钮
+            value:input的值
+    -->
+    <form action="#" method="GET">
+        <!-- label可以让文字与后面的文本框关联 -->
+        <!-- 用户名（text） -->
+        <label for="username">用户名：</label>
+        <input type="text" name="uname" id="username" value=""><br>
+        <!-- 密码（password） -->
+        <label for="password">密码：</label>
+        <input type="password" name="upwd" id="password"><br>
+        <!-- 年龄（数字） -->
+        <label for="age">年龄：</label>
+        <input type="number" name="uage" id="age"><br>
+        <!-- 手机号（tel） -->
+        <label for="phone">手机号</label>
+        <input type="tel" name="uphone" id="phone" value="123456789"><br>
+        <!-- 性别（单选） -->
+        <label for="sex">性别：</label>
+        <input type="radio" name="usex" id="sex" value="1">男
+        <input type="radio" name="usex"  value="2">女<br>
+        <!-- 爱好（多选） -->
+        <label for="game">爱好：</label>
+        <input type="checkbox" name="unhobby" value="games" id="game">打游戏
+        <input type="checkbox" name="unhobby" value="sleep" >睡觉
+        <input type="checkbox" name="unhobby" value="eat" >吃
+        <input type="checkbox" name="unhobby" value="doudou">打豆豆<br>
+        <!-- 提交、清空及普通按钮 -->
+        <input type="submit" value="提交" name="usubmit">
+        <input type="reset" value="清空" name="ureset" >
+        <input type="button" value="普通按钮" name="ubutton">
+    </form>
+    <!-- form表单，上传文件file -->
+    <form action="" method="POST" enctype="multipart/form-data">
+        <label for="upload">上传文件：</label>
+        <input type="file" name="ufile" id="upload">
+    </form>
+</body>
+</html>

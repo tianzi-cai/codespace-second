@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 当2个元素，同时作用margin时，网页默认处理方式：
+            上下margin取值，取最大；
+            左右margin取值，为相加；
+         */
+         /* 兄弟元素之间外边距合并 */
+             /* 方式1：需要的外边框值设大 */
+         .box1{
+             width: 100px;
+             height: 100px;
+             background-color: tomato;
+             margin-bottom: 20px;
+         }
+         .box2{
+             width: 200px;
+             height: 200px;
+             background-color: blue;
+             margin-top: 50px;
+             /* margin-top的值设为自己所需要的值 */
+         }
+             /* 方式2：给个父类，设padding值 */
+         .box3{
+             width: 100px;
+             height: 100px;
+             background-color: tomato;
+             margin-bottom: 20px;
+         }
+         .box4-parent{
+            padding-top: 30px;
+         }
+         .box4{
+             width: 200px;
+             height: 200px;
+             background-color: blue;
+        }
+        
+        /* 父子元素之间外边距合并 */
+        .parent{
+            margin-top: 20px;
+            height: 500px;
+            background-color: cadetblue;
+            padding-top: 30px;
+            /* border-top: 30px solid cadetblue; */
+        }
+        .child{
+            height: 200px;
+            background-color: chartreuse;
+        }
+        /* margin为负时的父子 */
+        .parent1{
+            width: 600px;
+            height: 500px;
+            background-color: rgb(241, 136, 15);
+            margin: 100px auto;
+            padding-top: 30px;
+        }
+        .child1{
+            width: 500px;
+            height: 200px;
+            background-color: rgb(68, 157, 230);
+            margin: 0 auto;
+            margin-top: -100px;
+        }
+        .ci{
+            width: 70px;
+            height: 70px;
+            background-color: crimson;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS 外边距合并 -->
+    <!-- 兄弟元素之间外边距合并 -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <!-- 兄弟元素外边距合并解决方法2：添加父元素 -->
+    <div class="box3"></div>
+    <div class="box4-parent">
+        <div class="box4"></div>
+    </div>
+    <!-- 父子元素之间外边距合并 -->
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <br>
+    <!-- margin为负时的父子 -->
+    <div class="ci"></div>
+    <div class="parent1">
+        <div class="child1"></div>
+    </div>
+</body>
+</html>

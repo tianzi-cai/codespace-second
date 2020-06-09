@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 7.后代选择器:祖先选择器 后代选择器{样式} */
+        .box p{
+            color: red;
+        }                          /* 空格,后代是指对所有子子孙孙,样式都会变动 */
+        .box .child-div{
+            color: green;
+        }
+        /* 8.子选择器:父亲选择器>儿子选择器{样式} */
+        .box>p{
+            color: blue;
+        }
+        /* 9.兄弟选择器:~ */
+        .item2 ~ li{
+            color: red;
+        }
+        /* 10. 相邻兄弟选择器 + */
+        .item1 + li{
+            color: green;
+        }
+        /* 兄弟选择器也就是同一框架代码的下一行或是下面的多行所有 */
+    </style>
+</head>
+<body>
+    <!-- 后代选择器+子选择器 -->
+    <div class="box">
+        <p>box中的子元素-p标签</p>
+        <p>box中的子元素-p标签</p>
+        <div>
+            <div class="child-div">box中的子元素div的子元素-div标签</div>
+            <p>box中的孙子元素-p标签</p>
+            <p>box中的孙子元素-p标签</p>
+        </div>
+    </div>
+    <!-- 兄弟选择器+相邻兄弟选择器 -->
+    <ul class="list1">
+        <li class="item1">项目一</li>
+        <li class="item2">项目二</li>
+        <li >项目三</li>
+        <li>项目四</li>
+        <li>项目五</li>
+    </ul>
+    <ul class="list2">
+        <li class="item1">项目一</li>
+        <li class="item2">项目二</li>
+        <li>项目三</li>
+        <li>项目四</li>
+        <li>项目五</li>
+    </ul>
+</body>
+</html>

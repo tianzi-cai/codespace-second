@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // imgList存放heart信息参数
+        var imgList =[];
+        var timer =null;
+        var flag =true;
+
+        // 随机角度函数
+        function randomDeg(){
+            let x;
+            x = Math.random()*60-30;
+            return x;
+        };
+
+        // 页面点击显示图片
+        document.addEventListener('click',function(e){
+
+            // 创建爱心的图片
+            let heart = document.createElement('img');
+            heart.src ='img/1.png';
+            
+            // 显示在鼠标点击的位置
+            heart.style.position = 'absolute';
+            heart.style.left = e.clientX-32+'px';
+            heart.style.top =e.clientY-32 +'px';
+
+            // 随机显示角度
+            heart.style.transform = 'rotate('+randomDeg()+'deg)';
+            
+            // 在body中添加img爱心的图片
+            document.body.appendChild(heart);
+
+            imgList.push({
+                heart:heart,
+                opacity:1,//透明度
+                translatex:0,
+                translatey:0,
+                frame:0,//控制前20帧不动
+                scale:1//小于1时，缩小
+            });
+
+            // 每秒执行draw函数
+            if(!timer){
+                timer = setInterval(draw,60);
+            }
+            
+        });
+
+        // draw函数
+        function draw(){
+            // 链表为空时，数据初始化，跳出，不再执行
+            if(imgList.length<1){
+                clearInterval(timer);
+                timer =null;
+                return;
+            }
+
+            for(let i=0;i<imgList.length;i++){
+                if(imgList[i].opacity<0){
+                    imgList[i].heart.remove();
+                    imgList.splice(i,1);
+                }else{
+                    // 前20帧不绘制
+                    if(imgList[i].frame > 10){
+                        // 改变它的大小和透明度
+                        imgList[i].opacity -=0.02;
+                        imgList[i].scale +=0.06;
+                        imgList[i].translatey -=10;
+
+                        if(flag){
+                            imgList[i].translatex += 3;
+                        }else{
+                            imgList[i].translatex -=3;
+                        }
+
+                        if(imgList[i].translatex ==18 || imgList[i].translatex ==39){
+                            flag =false;
+                        }
+                        if(imgList[i].translatex ==-36){
+                            flag =true;
+                        }
+
+                        // 在页面显示
+                        // 获取页面中的随机旋转角度
+                        let rotateStr = imgList[i].heart.style.transform.split(' ')[0];
+                        imgList[i].heart.style.transform =rotateStr + "scale(" +imgList[i].scale +")";
+                        imgList[i].heart.style.transform =rotateStr + "translate("+imgList[i].translatex +"px,"+imgList[i].translatey+"px)";
+                        imgList[i].heart.style.opacity =imgList[i].opacity;
+
+                    }else{
+                        imgList[i].frame++;
+                    }
+
+                }
+            }
+
+
+        }
+
+
+    </script>
+</body>
+</html>

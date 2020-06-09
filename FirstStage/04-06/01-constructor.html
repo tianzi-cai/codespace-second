@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let date= new Date();
+        let num =5;
+        let arr = [1,2,3];
+        let nul =null;
+        let obj = {
+            name:'cai',
+            age:18
+        }
+        console.log(date.constructor);
+        console.log(num.constructor);
+        console.log(arr.constructor);
+
+        console.log(Object.prototype.toString.call(arr)); 
+        console.log(Object.prototype.toString.call(nul)); 
+
+        console.log(Array.isArray(arr));//isArray 只判断是不是数组
+        console.log(Array.isArray(obj));
+    </script>
+</body>
+</html>

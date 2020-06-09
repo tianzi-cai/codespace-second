@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+    <div id="myDiv" class="sel se1 se2">首页kb </div>
+    <div class="sel"></div>
+    <input type="text" name="uname">
+    <h2>伪类选择器</h2>
+
+    <ul class="menu">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+    </ul>
+
+    <script>
+        let myDiv =$('#myDiv');
+        myDiv.css('color','red');
+        myDiv.css({
+            "color":"#333",
+            "font-size": "20px",
+            "background-color":"orange"
+        });
+
+
+        let sels =$('.sel');
+        sels.addClass('newsel');
+        console.log(sels.hasClass('newsel'));
+        sels.removeClass('sel se1');
+        sels.hide();
+        sels.show();
+        console.log(sels.width());
+        console.log(sels.height());
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

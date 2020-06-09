@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>介绍</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body> 
+    <div id="app">
+        <!-- 字符随自己调整 -->
+        {{messag}}
+        <input type="text" name="" id="" v-model="messag">
+    </div>
+
+    <div id="app2">
+        <span v-bind:title="message">哈哈</span>
+    </div>
+
+    <div id="app3">
+        <span v-if="seen">显示未显示</span>
+    </div>
+
+    <div id="app4">
+        <ul>
+            <li v-for = "item in list">{{item}}</li>
+        </ul>
+    </div>
+
+
+
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data : {
+                messag:"hello"
+            }
+        });
+
+        var app2 = new Vue({
+            el:'#app2',
+            data :{
+                message : 'kkdkd'
+            }
+        });
+
+        var app3 = new Vue({
+            el:'#app3',
+            data :{
+                seen : false
+            }
+        });
+
+        var app4 = new Vue({
+            el:'#app4',
+            data :{
+                list :["1","2","3"]
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

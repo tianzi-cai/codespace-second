@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米顶部菜单</title>
+    <style>
+        /* 清楚浏览器默认样式 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar{
+            height: 40px;
+            background-color: #333;
+            font-size: 12px;
+            color: #b0b0b0;
+        }
+        .top-wrapper{
+            width: 1226px;
+            height: 40px;
+            /* 容器水平居中 */
+            margin: 0 auto;
+            /* 清浮动 */
+            overflow: hidden;
+        }
+        /* 左侧菜单项 */
+        .top-left{
+            /* 左侧菜单左浮动，记得给父容器清浮动 */
+            float: left;
+            /* display：inline-block; */
+        }
+        a{
+            text-decoration: none;
+        }
+        .top-item{
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            color: #b0b0b0;
+           
+        }
+        .sep{
+            display: inline-block;
+            margin: 0 4px;
+            color: #424242;
+        }
+
+        /* 右侧菜单 */
+        .top-right{
+            float: right;
+        }
+        /* 购物车样式 */
+        .cart{
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            /* vertical-align: top; */
+            color: #b0b0b0;
+            background-color: #424242;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-wrapper">
+            <div class="top-left">
+                <a href="" class="top-item">小米商城</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">MUI</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">loT</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">云服务</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">金融</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">有品</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">小爱开放平台</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">企业团购</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">资质证照</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">协议规则</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">下载app
+                    <div class="app-div">
+                        <img src="app.png" alt="">
+                        <p>下载app</p>
+                    </div>
+                </a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">Select Location</a>
+            </div>
+            <div class="top-right">
+                <a href="" class="top-item">登录</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">注册</a>
+                <span class="sep">|</span>
+                <a href="" class="top-item">消息通知</a>
+                <a href="" class="cart">购物车(0)</a>
+            </div>
+            <!-- 清除浮动方式 -->
+            <!-- <div style="clear: both;"></div> -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 设置背景颜色 */
+        .box1{
+            height: 50px;
+            background-color: orange;
+        }
+        /* 设置背景图片 */
+        .box2{
+            height: 600px;
+            background-image: url(pikaqiu.jpg);
+        }
+        /* 
+            设置背景图片：
+                不重复no-repeat 
+                重复repeat
+                横向重复repeat-x
+                纵向重复repeat-y
+        */
+        .box3{
+            height: 600px;
+            background-image: url(pikaqiu.jpg);
+            background-repeat: no-repeat;
+        }
+        /* 背景图片起始位置 */
+        .box4{
+            height: 600px;
+            background-image: url(pikaqiu.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            /* background-position: 50px 100px; */
+            /* background-position: 20% 15%; */
+        }
+        /* 背景图片是否固定
+            fixed:固定；
+            scroll：不固定
+         */
+        .box5{
+            height: 600px;
+            background-image: url(bg.jpg);
+            background-position: center center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS 颜色值的表示方式 -->
+    <p>1. 颜色名字：color:red;</p>
+    <p>2. 16进制色  color:#f00;</p>
+    <p style="color: rgb(255,0,0);">3. rgb(r,g,b) 0-255 如： rgb(255,0,0)</p>
+    <p style="color: rgba(255,0,0,0.5);">4. 带有透明度的颜色，rgba(r,g,b,a) a代表透明度，取值0-1。 如：rgba(255,0,0,0.5);</p>
+    <!-- 背景background设置 -->
+    <div class="box1">box1 设置背景颜色</div>
+    <div class="box2">box2 设置背景图片</div>
+    <div class="box3">设置背景图片不重复</div>
+    <div class="box4">设置背景图片的起始位置</div>
+    <div class="box5">背景图片是否固定或者随着页面的滚动而滚动</div>
+    <div class="box6">背景图片简写</div>
+</body>
+</html>

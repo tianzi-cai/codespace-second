@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form其他属性 -->
+    <form action="">
+        用户名：
+        <!-- fieldset:框选 -->
+        <fieldset>
+            <legend>健康信息</legend>
+            <label for="">身高</label>
+            <input type="text" name="uheight" id="userHeight">
+            <label for="">体重</label>
+            <input type="text" name="uweight" id="uwerWeight">
+        </fieldset>
+        <!-- 下拉列表 -->
+        <label for="province">城市：</label>
+        <select name="province" id="province">
+            <option value="shanghai">上海市</option>
+            <option value="jiansu">江苏省</option>
+            <option value="zhejian">浙江省</option>
+        </select>
+        <select name="city" id="citys">
+            <option value="">请选择城市</option>
+            <option value="shanghai">南京</option>
+            <option value="shuzhou">苏州</option>
+            <option value="wuxi">无锡</option>
+        </select>
+        <br>
+        <input type="submit" value="提交">
+    </form>
+    <!-- 下拉列表-分组 -->
+    <form action="">
+        爱好：
+        <select name="hobby" >
+            <optgroup label="球类">
+                <option value="">篮球</option>
+                <option value="">足球</option>
+            </optgroup>
+            <optgroup label="视频类">
+                <option value="">美剧</option>
+                <option value="">国产剧</option>
+            </optgroup>
+        </select>
+    </form>
+    <!-- 默认选中下拉列表中的一项 -->
+    <form action="">
+        带有默认选中的列表：
+        <select name="city" id="citys1">
+            <option value="">请选择城市</option>
+            <option value="shanghai1">南京</option>
+            <option value="shuzhou1" selected>苏州</option>
+            <option value="wuxi1">无锡</option>
+        </select>
+    </form>
+    <!-- 可以进行多选的下拉列表 -->
+    <form action="">
+        多选列表：
+        <select name="city" id="citys2" multiple="true">
+            <option value="">请选择城市</option>
+            <option value="shanghai2">南京</option>
+            <option value="shuzhou2" >苏州</option>
+            <option value="shanghai2">无锡</option>
+            <option value="changzhou">常州</option>
+            <option value="yancheng" >盐城</option>
+            <option value="nantong">南通</option>
+        </select>
+    </form>
+    <!-- 多行文本框 -->
+    <form action="">
+        自我评价：
+        <textarea name="intro" id="" cols="30" rows="10"></textarea>
+    </form>
+</body>
+</html>

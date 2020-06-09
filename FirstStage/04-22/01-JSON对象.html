@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        console.log(JSON.stringify('abc'));
+        // console.log(JSON.parse('abc'));
+        console.log('abc');
+        let obj ={
+            'pro1':'value1',
+            'pro2':'value2',
+            'pro3':'value3',
+            'pro4':'value4'
+        }
+        let x=['pro3','pro4'];
+        console.log(JSON.stringify(obj,x));
+        console.log(JSON.stringify(obj));
+        console.log(obj);
+        let y=JSON.stringify(obj,null,3);
+        console.log(y);
+        console.log(JSON.parse(y));
+        let z=JSON.stringify(obj,null,'+++');
+        console.log(z);
+        //报错
+        console.log(JSON.parse(z));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>默认内容</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <!-- 当自定义组件中，无内容时，可用slot添加默认内容 -->
+        <!-- 当自定义组件中，有内容时，会替换默认的内容 -->
+        <my-component>
+            <!-- 123 -->
+        </my-component>
+    </div>
+
+    <script>
+        Vue.component("my-component",{
+            template:`
+            <div>
+                <p>第一行</p>
+                <slot>我是默认内容</slot>
+                <p>最后一行</p>
+            </div>
+            `,
+        });
+        var app = new Vue({
+            el:"#app"
+        });
+
+        // 具名name-v   slot:name
+
+
+    </script>
+    
+</body>
+</html>

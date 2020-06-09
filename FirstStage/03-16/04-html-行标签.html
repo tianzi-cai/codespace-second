@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        常用的行内标签（不换行） 
+        span，a，strong，em，img，input,button,select等
+    -->
+    <!-- span——文本标签 -->
+    <span>文本标签</span>
+    <!-- a——超链接 -->
+    <a href="">超链接</a>
+    <!-- strong加粗，em斜体 -->
+    <p>一个文字段落，会有很多文字。如果有一些文字需要特殊样式，
+        如<em>斜体文字</em>、<strong>文本加粗</strong>、<span style="color:crimson">文本颜色变化</span>。
+        可以使用行内元素
+    </p>
+    <!-- img图片 -->
+    <img src="" alt=""><span>行内元素，不会换行</span>
+    <br>
+    <!-- input、select，选框按钮等 -->
+    <input type="text">
+    <button>按钮</button>
+    <select name="" id="">
+        <option value="">南京</option>
+        <option value="">苏州</option>
+        <option value="">无锡</option>
+    </select>
+    <!-- 
+        块元素与行内元素对比特点:
+        --块元素尺寸是可以控制的 
+    -->
+    <div style="background-color: cyan; width: 200px; height: 150px;">块元素-可以改变尺寸大小</div>
+    <span style="background-color:darkgoldenrod; width: 200px; height: 150px;">行内元素，无法改变尺寸</span>
+    <!-- 
+        块元素与行内元素对比特点:
+        --margin 
+    -->
+    <div style="background-color: darkorchid; margin: 20px;">margin可以任意设置</div>
+    <span style="background-color: darksalmon; margin: 20px;">对行内元素设置margin，上下无效</span>
+    
+    <!-- 块元素嵌套问题 -->
+    <p>p标签，不要嵌套div、h1-h6等标签，尽量使用与文本相关的标签，如span、strong、a、em等</p>
+    <p>h1-h6可以嵌套与文字相关的，也可以嵌套图片</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <style>
+        /* ::first-letter，匹配第一个字母 */
+        .para1::first-letter{
+            color: red;
+        }
+        /* ::first-line，匹配第一行 */
+        .para2::first-line{
+            color: red;
+        }
+        /* ::before，用content有前面加文字或图标 */
+        .text::before{
+            content: "ABC";
+            color: red;
+        }
+        /* ::after，用content有后面加文字或图标 */
+        .text::after{
+            content: "DEFG";
+            color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="para1">This is a paragraph in an article.</p>
+    <p class="para2">this is the first line. <br>
+        this is the second line.
+        this is the third line.
+    </p>
+    <!-- before + after -->
+    <span class="text">普通文本</span>
+</body>
+</html>

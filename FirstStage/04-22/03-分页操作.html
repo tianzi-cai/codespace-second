@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <a href="" class="page"  data-id="1">第一页</a>
+        <a href="" class="page"  data-id="2">第二页</a>
+        <a href="" class="page"  data-id="3">第三页</a>
+    </div>
+    <div id="content"></div>
+    <script>
+        let pages =document.querySelectorAll('.page');
+        let content =document.getElementById('content');
+
+        pages.forEach(function(item){
+            item.addEventListener('click',function(e){
+                e.preventDefault();
+                let id =item.dataset.id;
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET','http://127.0.0.1:5501/04-22/JSON/user'+id+'.json');
+                // xhr.open('GET','http://127.0.0.1:5501/04-22/JSON/user1.json');
+                xhr.send();
+                xhr.onload =function(){
+                    if(xhr.status ==200){
+                        content.innerHTML ='';
+                        let userList = JSON.parse(xhr.response);
+                        // console.log(userList);
+                        for(let x in userList){
+                            for(let y in userList[x]){
+                                let result = `<p><strong>${y}:</strong><span>${userList[x][y]}</span></p>`;
+                                let newDiv = document.createElement("div");
+                                newDiv.innerHTML = result;
+                                content.appendChild(newDiv);
+                            }
+                        }
+                    }
+                }
+
+            });
+        });
+
+
+
+    </script>
+</body>
+</html>

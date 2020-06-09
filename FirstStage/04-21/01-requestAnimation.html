@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>requestAnimationFrame</title>
+    <style>
+        #animate{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div id="animate"></div>
+    <script>
+        var element = document.getElementById("animate");
+        element.style.position = "absolute";
+        var start = null; //记录动画开始时间
+        var i = 0;
+        function step(times){
+            // 第一次调用step的时间
+            if(!start){
+                start = times;
+            }
+            // 当前调用step的时间与第一次时间的间隔
+            let progress = times - start;
+            // console.log(progress);
+            // if(i == 6){
+            //     i = 0;
+            // }
+            // 元素不断向右移动，最大不超过200像素
+            element.style.left = Math.min(progress/10, 200) + "px";
+            // element.style.height = (200 + i*20) + "px";
+            // i++;
+            // 如果距离第一次执行不超过2000毫秒，就继续执行动画
+            // 动画执行时间是2000毫秒
+            if(progress < 2000){
+                window.requestAnimationFrame(step);
+            }
+        }
+
+        window.requestAnimationFrame(step);
+        // let y=18;
+        // console.log();
+       
+    </script>
+</body>
+</html>

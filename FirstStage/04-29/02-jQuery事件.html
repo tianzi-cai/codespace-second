@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn1">点击事件</button>
+    <button id="btn2">点击事件2</button>
+    <div class="box">
+        <div class="sub-box">sub box1</div>
+        <div class="sub-box">sub box2</div>
+        <p class="sub-p">sub p1</p>
+        <p class="sub-p">sub p2</p>
+    </div>
+    <div class="content" style="height: 200px; border: 1px solid red;"></div>
+
+    <script>
+        // $('#btn1').on({
+        //     'click':function(){
+        //             alert('点击了按钮1');
+        //     },
+        //     'mouseover':function(e){
+        //         $(e.target).css('background','red');
+        //     },
+        //     'dblclick':function(e){
+        //         $(e.target).css('background','red');
+        //     },
+        //     // 'mouseout':function(e){
+        //     //     $(e.target).css('bacground','');
+        //     // }
+        // });
+
+
+        let subBox = $(".sub-box");
+        subBox.mouseover(function(e){
+            $(e.target).css("background","orange");
+        })
+        .mouseout(function(e){
+            $(e.target).css("background","");
+        });
+
+
+        // 事件可以链式绑定
+        // let subBox = $(".sub-box");
+        // subBox.mouseover(function(e){
+        //     $(e.target).css("background","orange");
+        // })
+        // .mouseout(function(e){
+        //     $(e.target).css("background","");
+        // });
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

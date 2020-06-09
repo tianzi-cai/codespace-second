@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;color: white;}
+        body{background-color: black;}
+        h3{
+            text-align: center;
+        }
+        header,article,footer{
+            border: 1px solid red;
+            text-align: center;
+        }
+        header,footer{height: 50px; background-color: royalblue;}
+        /* article{height: 200px;} */
+
+        .box1{
+            display: flex;
+            display: -webkit-flex;
+            flex-wrap: wrap;
+        }
+        .box1-1{
+            background-color: seagreen;
+        }
+        .box1-2{
+            background-color:sienna;
+        }
+        .box1-3{
+            background-color:yellowgreen;
+        }
+        .box1-4{
+            background-color:burlywood;
+        }
+        .box1-5{
+            background-color:sienna;
+        }
+        .box1-6{
+            background-color:yellowgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>第一种页面布局</h3>
+    <header>
+        头部
+    </header>
+    <article>
+        <div class="box1">
+            <div class="box1-1">box1-1</div>
+            <div class="box1-2">box1-2</div>
+            <div class="box1-3">box1-3</div>
+            
+            <div class="box1-4">box1-1</div>
+            <div class="box1-5">box1-2</div>
+            <div class="box1-6">box1-3</div>
+        </div>
+    </article>
+    <footer>
+        尾部
+    </footer>
+</body>
+</html>

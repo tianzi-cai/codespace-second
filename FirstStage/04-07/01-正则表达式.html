@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let str_en='This is web program,it is a good language';
+        let str_zh = '这是一个web编程';
+        let str_2 = '0123'
+        let str_1 = 'a';
+
+        if(/[a-z]/.test(str_1)){
+            console.log("true");
+        }else{
+            console.log('false');
+        }
+
+        let regex_4 =/^[a-zA-z0-9]?$/;
+        let temp="ssw8";
+        console.log(regex_4.test(temp));
+
+        let regex_53=/^[a-zA-Z]{3}[0-9_]{1,8}$/;
+        let temp_1='tfa2';
+        console.log(regex_53.test(temp_1));
+
+
+        let regex_72=/^0[0-9]{2,3}-[0-9]{7,8}(-[0-9]{4})?$/
+        let temp_2='0510-87787878';
+        console.log(regex_72.test(temp_2));
+
+        let regex_73=/^0[0-9]{2,3}-[0-9]{8}$/
+        let temp_3='0510-87787878';
+        console.log(regex_73.test(temp_3));
+
+        let regex_74 =/^[a-zA-Z0-9_-]+\@[a-zA-Z0-9_-]+\.[a-zA-Z]{3,10}(\.[a-zA-Z])?$/;
+        let temp_4 ='tianzi@qq.com';
+        console.log(regex_74.test(temp_4));
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

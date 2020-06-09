@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渲染函数</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="dynamicexample">
+    <h1>
+      <a name="hello-world" href="#hello-world">
+        Hello world!
+      </a>
+    </h1>
+
+    <anchored-heading :level="1">Hello world!</anchored-heading>
+  </div>
+
+  <script>
+    Vue.component('anchored-heading', {
+
+      render: function (createElement) {
+        return createElement(
+          'h' + this.level, // 标签名称
+          this.$slots.default // 子节点数组
+        )
+      },
+
+      props: {
+        level: {
+          type: Number,
+          required: true
+        }
+      }
+    });
+
+    var vm = new Vue({
+      el: '#dynamicexample'
+    })
+  </script>
+
+
+</body>
+
+</html>

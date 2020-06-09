@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css字体属性 */
+            /* 第一种表达方式 */
+            .part1{
+                /* 字体 */
+                font-family: Arial, Helvetica, sans-serif;
+                /* 字号 */
+                font-size: 20px;
+                /* 加粗，normal(正常)=400,bold=700,100~900可选 */
+                font-weight: bold;
+                /* 斜体 */
+                font-style: italic;
+            }
+            /* 第二种表达方式 */
+            .part1{
+                font: italic bolder 20px Arial, Helvetica, sans-serif;
+            }
+
+        /* css文本属性 */
+            /* 颜色、默认对齐方式，文字对齐方式，字符间距，行高 */
+            .para3{
+                color: orange;
+                direction: rtl;
+            }
+            .para4{
+                text-align: center;
+                letter-spacing: 10px;
+            }
+            .para5{
+                background-color: aquamarine;
+                line-height: 50px;
+            }
+            /* span元素垂直居中对齐，使用line-height实现 */
+            .para6{
+                height: 50px;
+                background-color: burlywood;
+            }
+            .para6 span{
+                line-height: 50px;
+            }
+            /* 去除下划线 */
+            a{
+                text-decoration: none;  
+            }
+            /* 删除线 */
+            .text{
+                text-decoration: line-through;
+            }
+            /* 上划线 */
+            .uptext{
+                text-decoration: overline;
+            }
+            /* 单行文本出现省略号 */
+            .para7{
+                background-color: cadetblue;
+                width: 100px;
+                height: 20px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+    </style>
+</head>
+<body>
+    <!-- css字体属性 -->
+    <p class="para1">文字段落</p>
+    <p style="text-align: right;">文本右对齐</p>
+    <p class="para3">改变文字方向</p>
+    <p class="para4">letter spacing</p>
+    <p class="para5">line height</p>
+    <p class="para6">
+        <span>文字居中对齐</span>
+    </p>
+
+    <a href="">去掉下划线</a>
+    <span class="text">删除xian</span>
+    <span class="uptext">上划线</span>
+    <!-- 首行缩进 -->
+    <p style="text-indent: 32px;">首行缩进</p>
+    <p>没有首行缩进</p>
+    <p class="para7">如果文本比较长，最后显示三个点的省略号</p>
+</body>
+</html>

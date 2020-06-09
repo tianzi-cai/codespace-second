@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-border应用</title>
+    <style>
+        /* css-border边框应用 */
+
+        /* 设置一边的边框的粗细、颜色、样式 */
+        .box1{
+            width: 200px;
+            height: 200px;
+            border-top-width: 10px;
+            border-top-color: orange;
+            border-top-style: dotted;
+            /* 简写 */
+            border-right: 10px orange dotted;
+        }
+        /* 设置四周的边框样式 */
+        .box2{
+            width: 200px;
+            height: 200px;
+            border-width: 20px;
+            border-style: solid;
+            border-color: orangered;
+            /* 简写 */
+            border: 20px solid orangered;
+        }
+        /* 设置三周的边框样式 */
+        .box3{
+            width: 200px;
+            height: 200px;
+            border: 20px solid green;
+            border-bottom: 20px dotted red;
+        }
+        /* 边框粗细四周参数不一样 */
+            /* 1个参数，4周都一样 */
+            .box4{
+                width: 200px;
+                height: 200px;
+                border:10px solid greenyellow;
+                border-width: 20px;
+            }
+            /* 2个参数 */
+            .box5{
+                width: 200px;
+                height: 200px;
+                border:10px solid rgb(167, 17, 55);
+                border-width: 20px 30px;
+            }
+            /* 3个参数 */
+            .box6{
+                width: 200px;
+                height: 200px;
+                border:10px solid rgb(37, 10, 110);
+                border-width: 20px 30px 40px;
+            }
+            /* 4个参数 */
+            .box7{
+                width: 200px;
+                height: 200px;
+                border:10px solid red;
+                border-width: 20px 30px 40px 50px;
+            }
+    </style>
+</head>
+<body>
+    <h2>CSS盒子模型</h2>
+    <h3>border</h3>
+    <!-- 设置一边的边框的粗细、颜色、样式 -->
+    <div class="box1">box1 content</div>
+    <!-- 设置四周的边框 -->
+    <div class="box2">box2 设置四周的边框</div>
+    <!-- 设置三周的边框样式 -->
+    <div class="box3">三边的边框一样，某一边单独设置</div>
+    <!-- 边框粗细4周参数不一样 -->
+        <!-- 1个参数，4周都一样 -->
+        <div class="box4">边框的四周参数不同，宽度一个参数</div>
+        <!-- 2个参数 -->
+        <div class="box5">边框宽度2个参数</div>
+        <!-- 3个参数 -->
+        <div class="box6">边框宽度3个参数</div>
+        <!-- 4个参数 -->
+        <div class="box7">边框宽度4个参数</div>
+</body>
+</html>

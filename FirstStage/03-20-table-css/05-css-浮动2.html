@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 方式1:直接改高度，不推荐使用 */
+        .parent{
+            background-color: teal;
+            height: 200px;
+        }
+        .box1{
+            background-color: darkmagenta;
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+        .box2{
+            background-color: rgb(23, 170, 35);
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+        .container{
+            height: 200px;
+            background-color: yellow;
+        }
+        /* 方式2:clear：both */
+        .parent2{
+            background-color: teal;
+        }
+        .box3{
+            background-color: darkmagenta;
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+        .box4{
+            background-color: rgb(23, 170, 35);
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+        .clearfix{
+            clear: both;
+        }
+        /* 方式3:overflow：hidden */
+        .parent3{
+            background-color: teal;
+            overflow: hidden;
+        }
+        .box5{
+            background-color: darkmagenta;
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+        .box6{
+            background-color: rgb(23, 170, 35);
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+        /* overflow */
+        .overflow-div1{
+            height: 200px;
+            width: 200px;
+            border: 1px solid red;
+            /* overflow: hidden; */
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <!-- 让父元素有高度，清除浮动 -->
+    <div class="parent">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+    </div>
+    <div class="container"></div><br>
+
+    <!-- 清除浮动方法2：clear：both -->
+    <div class="parent2">
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="container"></div><br>
+    <!-- 清除浮动方法3：overflow：hidden -->
+    <div class="parent3">
+        <div class="box5">box5</div>
+        <div class="box6">box6</div>
+    </div>
+    <div class="container"></div><br>
+    <!-- overflow -->
+    <div class="overflow-div1">
+        苏州，简称“苏”，古称姑苏、平江，是江苏省地级市，国务院批复确定的中国长江三角洲重要的中心城市之一、
+        国家高新技术产业基地和风景旅游城市 [1]  。截至2018年，全市下辖5个区、代管4个县级市，
+        总面积8657.32平方千米，建成区面积461.65平方千米，常住人口1072.17万人，城镇人口815.39万人，
+        城镇化率76.05%。 [2-3] 
+    苏州地处中国华东地区、江苏东南部、长三角中部，是扬子江城市群重要组成部分，东临上海、南接嘉兴、西抱太湖、
+    北依长江，地处东经119°55′～121°20′，北纬30°47′～32°02′之间。全市地势低平，平原占总面积的54.8%，
+    海拔4米左右，丘陵占总面积的2.7%。苏州属亚热带季风海洋性气候，四季分明，雨量充沛，种植水稻、小麦、
+    油菜，出产棉花、蚕桑、林果，特产有碧螺春茶叶、长江刀鱼、太湖银鱼、阳澄湖大闸蟹等。 [4-5] 
+    </div>
+</body>
+</html>

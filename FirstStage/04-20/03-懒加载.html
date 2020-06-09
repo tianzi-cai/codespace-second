@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            background-color: salmon;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 800px; border: 1px solid red;"></div>
+    <div class="container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+    </div>
+    <script>
+        function scrollTop(){
+            return document.documentElement.scrollTop;
+        }
+        function windowHeight(){
+            return document.documentElement.clientHeight;
+        }
+        function documentHeight(){
+            return document.documentElement.scrollHeight;
+        }
+        window.addEventListener('scroll',function(){
+            if(scrollTop()+windowHeight()>=documentHeight()-100){
+                let container =document.querySelector('.container');
+                for(let i=0;i<4;i++){
+                    let newEle =document.createElement('div');
+                    newEle.classList.add('item');
+                    newEle.innerText='新item'+i;
+                    container.appendChild(newEle);
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

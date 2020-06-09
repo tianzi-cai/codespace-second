@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">获取test.txt中的内容</button>
+    <div id="content"></div>
+    <script>
+        let btn =document.getElementById('btn');
+        let content = document.getElementById('content');
+        btn.onclick =function(){
+            let url='http://127.0.0.1:5501/04-22/test.txt';
+            fetch(url).then(function(response){
+                response.text().then(function(text){
+                    // console.log(text);
+                    // content.appendChild(text);
+                    content.innerHTML =text;
+                })
+            })
+        }
+
+    </script>
+</body>
+</html>

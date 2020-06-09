@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prop</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+
+    <script>
+        let Login ={
+            props:["id"],
+            template:`
+            <div>
+                {{$route.params.id}}
+                {{id}}
+            </div>
+            `
+        }
+
+        const routes =[
+            {
+                path:"/login/:id",
+                component:Login,
+                props:true
+            }
+        ];
+
+        const router = new VueRouter({
+            routes
+        });
+
+        var app = new Vue({
+            el:"#app",
+            router
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //字符串相关复习：
+
+        // let str_en =' This is web program,it is a good language';
+        // console.log(str_en.charAt(1)) ;
+        // console.log(str_en.charCodeAt(1)) ;
+        // console.log(str_en.indexOf('web2'));
+        // console.log(str_en.lastIndexOf('is'));
+        // console.log(str_en.includes('is'));
+        // console.log(str_en.split(' '));
+        // console.log(str_en.slice(-2,-1));
+        // console.log(str_en.substr(0,2));
+        // console.log(str_en.toLocaleLowerCase());
+        // console.log(str_en.repeat(2));
+        // console.log(str_en.replace('web','php'));
+        // console.log(str_en.trim());
+        // console.log(str_en);
+
+        // let num = 123.45;
+        // console.log(num.toString());
+        // console.log(String(undefined));
+        // let str_1 = String(undefined);
+        // console.log(str_1);
+        // console.log(str_1.split(''));
+        // console.log(num);
+
+    //正则表达式相关复习：
+        // let regex =/xxx/;
+        // let regex_1 = new RegExp('xxx');
+
+        // let regex_2 =/^[a-zA-Z]{3}$/;
+        // let str_1 ='hgh';
+        // console.log(regex_2.test(str_1)) ;
+
+        // let regex_3 =/[a-zA-Z\s,]+/g;
+        // let str_en =' This is web program,it is a good language';
+        // console.log(regex_3.exec(str_en));
+
+        // let regex_4 =/is/g;
+        // console.log(str_en.replace(regex_4,'book'));
+
+    //数组相关复习：
+        // let arr1 = new Array(4,3);
+        // let arr2 =[1,2,3,4,5,,2];
+        // let arr3 =['a','b','c'];
+        // let arr3 =Array.apply(null, arr2);
+        // arr3.forEach(function(item){
+        //     console.log(item);
+        // });
+        // console.log(arr2);
+        // arr2.length=3;
+        // let obj ={
+        //     name :'cai'
+        // };
+        // obj.arr2 =arr2;
+        // console.log(obj);
+
+        // let o1 ={
+        //     age:18,
+        //     name :'cai',
+        //     info :{
+        //         address:'suzhou'
+        //     }
+        // };
+        // let o2 = Object.assign(o1) ;
+        // // console.log(o1.age);
+        // console.log(o2);
+
+        console.log("方式三：使用对象的assign函数");
+        let o1 = {
+            age: 18,
+            name:"tina",
+            info:{
+                address: "suzhou"
+            }
+        };
+        let o2 = Object.assign(o1);
+        o2.age =19;
+        console.log(o1);
+
+        
+
+
+
+        
+
+
+    </script>
+</body>
+</html>
